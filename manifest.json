@@ -1,0 +1,70 @@
+{
+    "name": "Vannabox - UMKM Tambak Udang Vaname Tegal",
+    "short_name": "Vannabox",
+    "description": "UMKM tambak udang vaname terpercaya di Tegal yang menyediakan udang segar berkualitas premium dengan teknologi bioflok modern",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#2563eb",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "lang": "id",
+    "dir": "ltr",
+    "categories": ["food", "business", "shopping"],
+    "icons": [
+        {
+            "src": "logo-new.webp",
+            "sizes": "192x192",
+            "type": "image/webp",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "logo-new.webp",
+            "sizes": "512x512",
+            "type": "image/webp",
+            "purpose": "any maskable"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "logo-new.webp",
+            "sizes": "1280x720",
+            "type": "image/webp",
+            "platform": "wide",
+            "label": "Vannabox Homepage"
+        },
+        {
+            "src": "logo-new.webp",
+            "sizes": "750x1334",
+            "type": "image/webp",
+            "platform": "narrow",
+            "label": "Vannabox Mobile"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Produk Udang",
+            "short_name": "Produk",
+            "description": "Lihat produk udang vaname premium",
+            "url": "/#products",
+            "icons": [
+                {
+                    "src": "logo-new.webp",
+                    "sizes": "96x96"
+                }
+            ]
+        },
+        {
+            "name": "Hubungi Kami",
+            "short_name": "Kontak",
+            "description": "Hubungi Vannabox untuk pemesanan",
+            "url": "/#contact",
+            "icons": [
+                {
+                    "src": "logo-new.webp",
+                    "sizes": "96x96"
+                }
+            ]
+        }
+    ]
+}
