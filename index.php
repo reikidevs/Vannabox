@@ -1,3 +1,23 @@
+<?php
+// Basic security headers at server side to reduce information disclosure
+header('X-Content-Type-Options: nosniff');
+header('X-Frame-Options: DENY');
+header('X-XSS-Protection: 1; mode=block');
+header('Referrer-Policy: strict-origin-when-cross-origin');
+header('Permissions-Policy: camera=(), microphone=(), geolocation=()');
+// Hide PHP errors from visitors
+error_reporting(0);
+ini_set('display_errors', 0);
+session_start();
+// Initialize CSRF token in session if missing
+if (empty($_SESSION['csrf_token'])) {
+    try {
+        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+    } catch (Throwable $e) {
+        $_SESSION['csrf_token'] = bin2hex(openssl_random_pseudo_bytes(32));
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth" prefix="og: http://ogp.me/ns#">
 <head>
@@ -898,7 +918,7 @@
                     <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Kirim Pesan</h3>
                     <form id="contact-form" class="space-y-6" method="POST" action="#contact" novalidate>
                         <!-- CSRF Protection -->
-                        <input type="hidden" name="csrf_token" value="<?php echo bin2hex(random_bytes(32)); ?>">
+                        <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token'] ?? '', ENT_QUOTES, 'UTF-8'); ?>">
                         <input type="hidden" name="form_type" value="contact">
                         
                         <!-- Honeypot for bot protection -->
@@ -1195,29 +1215,21 @@
             });
         }
 
-        // Enhanced form submission with security checks
+        // Enhanced form submission with server-side processing (JSON API)
         if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
+            contactForm.addEventListener('submit', async function(e) {
                 e.preventDefault();
 
                 // Validate all fields
                 const formFields = this.querySelectorAll('input[required], textarea[required]');
                 let isFormValid = true;
+                formFields.forEach(field => { if (!validateField(field)) isFormValid = false; });
 
-                formFields.forEach(field => {
-                    if (!validateField(field)) {
-                        isFormValid = false;
-                    }
-                });
-
-                // Check honeypot (bot protection)
+                // Honeypot (bot protection)
                 const honeypot = this.querySelector('input[name="website"]');
-                if (honeypot && honeypot.value) {
-                    console.log('Bot detected');
-                    return;
-                }
+                if (honeypot && honeypot.value) { return; }
 
-                // Check CAPTCHA
+                // Check CAPTCHA (client-side only)
                 const captcha = this.querySelector('input[name="captcha"]');
                 if (!captcha || !captcha.checked) {
                     alert('Silakan centang "Saya bukan robot"');
@@ -1229,46 +1241,114 @@
                     return;
                 }
 
-                // Show loading state
                 const submitText = submitBtn.querySelector('.submit-text');
                 const loadingText = submitBtn.querySelector('.loading-text');
-                
                 submitBtn.disabled = true;
                 submitText.classList.add('hidden');
                 loadingText.classList.remove('hidden');
 
-                // Simulate form submission (replace with actual submission logic)
-                setTimeout(() => {
+                // Prepare payload
+                const payload = {
+                    name: this.querySelector('input[name="name"]').value.trim(),
+                    phone: this.querySelector('input[name="phone"]').value.trim(),
+                    email: this.querySelector('input[name="email"]').value.trim(),
+                    message: this.querySelector('textarea[name="message"]').value.trim(),
+                    website: honeypot ? honeypot.value : '',
+                    csrf_token: this.querySelector('input[name="csrf_token"]').value
+                };
+
+                try {
+                    const res = await fetch('api/contact.php', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload),
+                        cache: 'no-store',
+                        credentials: 'same-origin'
+                    });
+
+                    const data = await res.json().catch(() => ({}));
+
                     // Reset loading state
                     submitBtn.disabled = false;
                     submitText.classList.remove('hidden');
                     loadingText.classList.add('hidden');
 
-                    // Show success message
-                    alert('Terima kasih! Pesan Anda telah dikirim. Kami akan segera menghubungi Anda.');
-                    
-                    // Reset form
+                    if (!res.ok || !data || data.success !== true) {
+                        alert(data && data.message ? data.message : 'Gagal mengirim. Coba lagi.');
+                        return;
+                    }
+
+                    // Success
+                    alert(data.message || 'Terima kasih! Pesan Anda sudah kami terima.');
+
+                    // Update CSRF token if server returned a new one
+                    if (data.new_csrf_token) {
+                        const csrfInput = this.querySelector('input[name="csrf_token"]');
+                        if (csrfInput) csrfInput.value = data.new_csrf_token;
+                    }
+
+                    // Reset form and visuals
                     this.reset();
+                    if (captcha) captcha.checked = false;
                     if (charCount) charCount.textContent = '0';
-                    
-                    // Remove any error styling
                     formFields.forEach(field => {
                         field.classList.remove('border-red-500');
                         const errorDiv = field.parentNode.querySelector('.error-message');
-                        if (errorDiv) {
-                            errorDiv.classList.add('hidden');
-                        }
+                        if (errorDiv) errorDiv.classList.add('hidden');
                     });
-                }, 2000);
+
+                } catch (err) {
+                    // Reset loading state
+                    submitBtn.disabled = false;
+                    submitText.classList.remove('hidden');
+                    loadingText.classList.add('hidden');
+                    alert('Terjadi kesalahan jaringan. Coba lagi nanti.');
+                }
             });
         }
 
-        // Security: Disable right-click context menu on sensitive elements
+        // Security: Allow right-click, only restrict on sensitive elements (images, forms)
         document.addEventListener('contextmenu', function(e) {
             if (e.target.tagName === 'IMG' || e.target.closest('form')) {
                 e.preventDefault();
             }
         });
+
+        // Blokir shortcut umum untuk Inspect/Source/Console
+        document.addEventListener('keydown', function(e) {
+            // F12
+            if (e.keyCode === 123) { e.preventDefault(); return false; }
+            // Ctrl/Cmd + Shift + I/J/C
+            if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67)) {
+                e.preventDefault(); return false;
+            }
+            // Ctrl/Cmd + U (View Source), S (Save), P (Print)
+            if ((e.ctrlKey || e.metaKey) && (e.keyCode === 85 || e.keyCode === 83 || e.keyCode === 80)) {
+                e.preventDefault(); return false;
+            }
+        });
+
+        // Deteksi DevTools sederhana dan tampilkan overlay peringatan
+        (function(){
+            const threshold = 160; // ambang selisih inner vs outer window
+            setInterval(function(){
+                try {
+                    const opened = (window.outerWidth - window.innerWidth > threshold) || (window.outerHeight - window.innerHeight > threshold);
+                    let overlay = document.getElementById('devtools-block');
+                    if (opened) {
+                        if (!overlay) {
+                            overlay = document.createElement('div');
+                            overlay.id = 'devtools-block';
+                            overlay.style.cssText = 'position:fixed;inset:0;background:#000;opacity:.95;color:#fff;z-index:99999;display:flex;align-items:center;justify-content:center;font:600 18px/1.4 Inter,Arial,sans-serif;text-align:center;padding:24px;';
+                            overlay.textContent = 'Akses dibatasi. Tutup developer tools untuk melanjutkan.';
+                            document.body.appendChild(overlay);
+                        }
+                    } else if (overlay) {
+                        overlay.remove();
+                    }
+                } catch(_) {}
+            }, 500);
+        })();
 
         // Security: Disable text selection on logo
         document.querySelectorAll('img[alt*="Logo"]').forEach(img => {
