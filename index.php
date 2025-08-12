@@ -20,16 +20,19 @@ if (empty($_SESSION['csrf_token'])) {
 ?>
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth" prefix="og: http://ogp.me/ns#">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="format-detection" content="telephone=no">
-    
+
     <!-- Primary Meta Tags -->
     <title>Vannabox - UMKM Tambak Udang Vaname Tegal | Udang Segar Berkualitas Premium Indonesia</title>
     <meta name="title" content="Vannabox - UMKM Tambak Udang Vaname Tegal | Udang Segar Berkualitas Premium Indonesia">
-    <meta name="description" content="Vannabox adalah UMKM tambak udang vaname terpercaya di Tegal, Jawa Tengah. Menyediakan udang vaname segar berkualitas premium dengan teknologi bioflok modern, ramah lingkungan, bersertifikat halal, dan sistem cold chain terjamin. Pengiriman same day area Tegal.">
-    <meta name="keywords" content="udang vaname, tambak udang tegal, udang segar, bioflok, udang premium, UMKM tegal, udang halal, vannabox, litopenaeus vannamei, udang putih, seafood segar, aquaculture, budidaya udang, cold chain, pengiriman udang, udang berkualitas, protein tinggi, omega 3, makanan sehat">
+    <meta name="description"
+        content="Vannabox adalah UMKM tambak udang vaname terpercaya di Tegal, Jawa Tengah. Menyediakan udang vaname segar berkualitas premium dengan teknologi bioflok modern, ramah lingkungan, bersertifikat halal, dan sistem cold chain terjamin. Pengiriman same day area Tegal.">
+    <meta name="keywords"
+        content="udang vaname, tambak udang tegal, udang segar, bioflok, udang premium, UMKM tegal, udang halal, vannabox, litopenaeus vannamei, udang putih, seafood segar, aquaculture, budidaya udang, cold chain, pengiriman udang, udang berkualitas, protein tinggi, omega 3, makanan sehat">
     <meta name="author" content="Vannabox UMKM">
     <meta name="publisher" content="Vannabox">
     <meta name="copyright" content="© 2024 Vannabox. All rights reserved.">
@@ -50,12 +53,13 @@ if (empty($_SESSION['csrf_token'])) {
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Vannabox">
     <meta name="mobile-web-app-capable" content="yes">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Vannabox">
     <meta property="og:title" content="Vannabox - UMKM Tambak Udang Vaname Tegal | Udang Segar Berkualitas Premium">
-    <meta property="og:description" content="UMKM tambak udang vaname terpercaya di Tegal. Udang segar berkualitas premium dengan teknologi bioflok modern, bersertifikat halal, pengiriman same day.">
+    <meta property="og:description"
+        content="UMKM tambak udang vaname terpercaya di Tegal. Udang segar berkualitas premium dengan teknologi bioflok modern, bersertifikat halal, pengiriman same day.">
     <meta property="og:image" content="https://vannabox.umkmpower.com/logo-new.webp">
     <meta property="og:image:secure_url" content="https://vannabox.umkmpower.com/logo-new.webp">
     <meta property="og:image:type" content="image/webp">
@@ -67,21 +71,22 @@ if (empty($_SESSION['csrf_token'])) {
     <meta property="og:locale:alternate" content="en_US">
     <meta property="article:author" content="Vannabox">
     <meta property="article:publisher" content="https://www.facebook.com/vannabox">
-    
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@vannabox">
     <meta name="twitter:creator" content="@vannabox">
     <meta name="twitter:title" content="Vannabox - UMKM Tambak Udang Vaname Tegal | Udang Segar Berkualitas Premium">
-    <meta name="twitter:description" content="UMKM tambak udang vaname terpercaya di Tegal. Udang segar berkualitas premium dengan teknologi bioflok modern, bersertifikat halal.">
+    <meta name="twitter:description"
+        content="UMKM tambak udang vaname terpercaya di Tegal. Udang segar berkualitas premium dengan teknologi bioflok modern, bersertifikat halal.">
     <meta name="twitter:image" content="https://vannabox.umkmpower.com/logo-new.webp">
     <meta name="twitter:image:alt" content="Vannabox - Tambak Udang Vaname Premium Tegal">
-    
+
     <!-- Canonical and Alternate URLs -->
     <link rel="canonical" href="https://vannabox.umkmpower.com">
     <link rel="alternate" hreflang="id" href="https://vannabox.umkmpower.com">
     <link rel="alternate" hreflang="x-default" href="https://vannabox.umkmpower.com">
-    
+
     <!-- Favicon and Icons -->
     <link rel="icon" type="image/webp" href="logo-new.webp" sizes="32x32">
     <link rel="icon" type="image/webp" href="logo-new.webp" sizes="16x16">
@@ -96,10 +101,10 @@ if (empty($_SESSION['csrf_token'])) {
     <link rel="apple-touch-icon" href="logo-new.webp" sizes="57x57">
     <link rel="mask-icon" href="logo-new.webp" color="#2563eb">
     <link rel="shortcut icon" href="logo-new.webp">
-    
+
     <!-- Manifest -->
     <link rel="manifest" href="manifest.json">
-    
+
     <!-- DNS Prefetch and Preconnect -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -108,136 +113,144 @@ if (empty($_SESSION['csrf_token'])) {
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    
+
     <!-- Enhanced Security Headers -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' http: https: data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' http: https: data:; style-src 'self' 'unsafe-inline' http: https:; font-src 'self' http: https: data:; img-src 'self' data: http: https: blob:; connect-src 'self' http: https:; media-src 'self' http: https: data:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';">
-    
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' 'unsafe-inline' 'unsafe-eval' http: https: data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' http: https: data:; style-src 'self' 'unsafe-inline' http: https:; font-src 'self' http: https: data:; img-src 'self' data: http: https: blob:; connect-src 'self' http: https:; media-src 'self' http: https: data:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';">
+
     <!-- Structured Data - Organization -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Vannabox",
-        "alternateName": "Vannabox UMKM Tambak Udang",
-        "url": "https://vannabox.umkmpower.com",
-        "logo": "https://vannabox.umkmpower.com/logo-new.webp",
-        "description": "UMKM tambak udang vaname terpercaya di Tegal yang menyediakan udang segar berkualitas premium dengan teknologi bioflok modern",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Jalan Timor Timur RT 9 RW 10, Kel. Panggung, Kec. Tegal Timur, Kota Tegal",
-            "addressLocality": "Tegal",
-            "addressRegion": "Jawa Tengah",
-            "postalCode": "52114",
-            "addressCountry": "ID"
-        },
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+62 858-6413-8261",
-            "contactType": "customer service",
-            "availableLanguage": ["Indonesian"]
-        },
-        "sameAs": [
-            "https://www.facebook.com/vannabox",
-            "https://www.instagram.com/vannabox",
-            "https://wa.me/6285864138261"
-        ],
-        "foundingDate": "2014",
-        "numberOfEmployees": "10-50",
-        "areaServed": {
-            "@type": "Place",
-            "name": "Tegal, Jawa Tengah, Indonesia"
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Vannabox",
+            "alternateName": "Vannabox UMKM Tambak Udang",
+            "url": "https://vannabox.umkmpower.com",
+            "logo": "https://vannabox.umkmpower.com/logo-new.webp",
+            "description": "UMKM tambak udang vaname terpercaya di Tegal yang menyediakan udang segar berkualitas premium dengan teknologi bioflok modern",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Jalan Timor Timur RT 9 RW 10, Kel. Panggung, Kec. Tegal Timur, Kota Tegal",
+                "addressLocality": "Tegal",
+                "addressRegion": "Jawa Tengah",
+                "postalCode": "52114",
+                "addressCountry": "ID"
+            },
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+62 858-6413-8261",
+                "contactType": "customer service",
+                "availableLanguage": ["Indonesian"]
+            },
+            "sameAs": [
+                "https://www.facebook.com/vannabox",
+                "https://www.instagram.com/vannabox",
+                "https://wa.me/6285864138261"
+            ],
+            "foundingDate": "2014",
+            "numberOfEmployees": "10-50",
+            "areaServed": {
+                "@type": "Place",
+                "name": "Tegal, Jawa Tengah, Indonesia"
+            }
         }
-    }
     </script>
-    
+
     <!-- Structured Data - Local Business -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Vannabox",
-        "image": "https://vannabox.umkmpower.com/logo-new.webp",
-        "description": "UMKM tambak udang vaname terpercaya di Tegal yang menyediakan udang segar berkualitas premium",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Jalan Timor Timur RT 9 RW 10, Kel. Panggung, Kec. Tegal Timur, Kota Tegal",
-            "addressLocality": "Tegal",
-            "addressRegion": "Jawa Tengah",
-            "postalCode": "52114",
-            "addressCountry": "ID"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": -6.8694,
-            "longitude": 109.1402
-        },
-        "url": "https://vannabox.umkmpower.com",
-        "telephone": "+62 858-6413-8261",
-        "email": "vannaboxshrimp@gmail.com",
-        "openingHoursSpecification": [
-            {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-                "opens": "06:00",
-                "closes": "18:00"
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Vannabox",
+            "image": "https://vannabox.umkmpower.com/logo-new.webp",
+            "description": "UMKM tambak udang vaname terpercaya di Tegal yang menyediakan udang segar berkualitas premium",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Jalan Timor Timur RT 9 RW 10, Kel. Panggung, Kec. Tegal Timur, Kota Tegal",
+                "addressLocality": "Tegal",
+                "addressRegion": "Jawa Tengah",
+                "postalCode": "52114",
+                "addressCountry": "ID"
             },
-            {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": "Sunday",
-                "opens": "06:00",
-                "closes": "12:00"
-            }
-        ],
-        "priceRange": "$",
-        "currenciesAccepted": "IDR",
-        "paymentAccepted": "Cash, Bank Transfer"
-    }
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": -6.8694,
+                "longitude": 109.1402
+            },
+            "url": "https://vannabox.umkmpower.com",
+            "telephone": "+62 858-6413-8261",
+            "email": "vannaboxshrimp@gmail.com",
+            "openingHoursSpecification": [{
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                    "opens": "06:00",
+                    "closes": "18:00"
+                },
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": "Sunday",
+                    "opens": "06:00",
+                    "closes": "12:00"
+                }
+            ],
+            "priceRange": "$",
+            "currenciesAccepted": "IDR",
+            "paymentAccepted": "Cash, Bank Transfer"
+        }
     </script>
-    
+
     <!-- Structured Data - Products -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "Udang Vaname Segar Premium",
-        "description": "Udang vaname (Litopenaeus vannamei) segar berkualitas premium dari tambak bioflok modern di Tegal",
-        "brand": {
-            "@type": "Brand",
-            "name": "Vannabox"
-        },
-        "category": "Seafood",
-        "offers": {
-            "@type": "Offer",
-            "price": "110000",
-            "priceCurrency": "IDR",
-            "availability": "https://schema.org/InStock",
-            "seller": {
-                "@type": "Organization",
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Udang Vaname Segar Premium",
+            "description": "Udang vaname (Litopenaeus vannamei) segar berkualitas premium dari tambak bioflok modern di Tegal",
+            "brand": {
+                "@type": "Brand",
                 "name": "Vannabox"
+            },
+            "category": "Seafood",
+            "offers": {
+                "@type": "Offer",
+                "price": "110000",
+                "priceCurrency": "IDR",
+                "availability": "https://schema.org/InStock",
+                "seller": {
+                    "@type": "Organization",
+                    "name": "Vannabox"
+                }
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "reviewCount": "150"
             }
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "150"
         }
-    }
     </script>
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <!-- Custom JavaScript -->
+    <script src="assets/js/theme-toggle.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -276,48 +289,24 @@ if (empty($_SESSION['csrf_token'])) {
             }
         }
     </script>
-    
+
     <style>
+        /* Critical inline styles for faster loading */
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
         }
-        
-        .hero-pattern {
-            background-image: 
-                radial-gradient(circle at 25px 25px, rgba(59, 130, 246, 0.1) 2px, transparent 0),
-                radial-gradient(circle at 75px 75px, rgba(34, 197, 94, 0.1) 2px, transparent 0);
-            background-size: 100px 100px;
-        }
-        
-        .dark .hero-pattern {
-            background-image: 
-                radial-gradient(circle at 25px 25px, rgba(59, 130, 246, 0.2) 2px, transparent 0),
-                radial-gradient(circle at 75px 75px, rgba(34, 197, 94, 0.2) 2px, transparent 0);
-        }
-        
-        .floating {
-            animation: floating 3s ease-in-out infinite;
-        }
-        
-        @keyframes floating {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        .fade-in {
-            animation: fadeIn 0.8s ease-in-out;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
     </style>
 </head>
+
 <body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
-    
+
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-700">
+    <nav
+        class="fixed top-0 w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
@@ -325,43 +314,59 @@ if (empty($_SESSION['csrf_token'])) {
                     <img src="logo-new.webp" alt="Vannabox Logo" class="h-10 w-auto">
                     <span class="text-xl font-bold text-primary-600 dark:text-primary-400">Vannabox</span>
                 </div>
-                
+
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Beranda</a>
-                    <a href="#about" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Tentang</a>
-                    <a href="#products" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Produk</a>
-                    <a href="#services" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Layanan</a>
-                    <a href="#contact" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Kontak</a>
-                    
+                    <a href="#home"
+                        class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Beranda</a>
+                    <a href="#about"
+                        class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Tentang</a>
+                    <a href="#products"
+                        class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Produk</a>
+                    <a href="#services"
+                        class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Layanan</a>
+                    <a href="#contact"
+                        class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Kontak</a>
+
                     <!-- Theme Toggle -->
-                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
-                        <i class="fas fa-sun dark:hidden"></i>
-                        <i class="fas fa-moon hidden dark:block"></i>
+                    <button id="theme-toggle"
+                        class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                        title="Toggle Dark Mode">
+                        <i class="fas fa-sun text-yellow-500"></i>
+                        <i class="fas fa-moon text-blue-400 hidden"></i>
                     </button>
                 </div>
-                
+
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center space-x-2">
-                    <button id="theme-toggle-mobile" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">
-                        <i class="fas fa-sun dark:hidden"></i>
-                        <i class="fas fa-moon hidden dark:block"></i>
+                    <button id="theme-toggle-mobile"
+                        class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                        title="Toggle Dark Mode">
+                        <i class="fas fa-sun text-yellow-500"></i>
+                        <i class="fas fa-moon text-blue-400 hidden"></i>
                     </button>
-                    <button id="mobile-menu-button" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">
+                    <button id="mobile-menu-button"
+                        class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">
                         <i class="fas fa-bars"></i>
                     </button>
                 </div>
             </div>
         </div>
-        
+
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
             <div class="px-4 py-2 space-y-1">
-                <a href="#home" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Beranda</a>
-                <a href="#about" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Tentang</a>
-                <a href="#products" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Produk</a>
-                <a href="#services" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Layanan</a>
-                <a href="#contact" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Kontak</a>
+                <a href="#home"
+                    class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Beranda</a>
+                <a href="#about"
+                    class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Tentang</a>
+                <a href="#products"
+                    class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Produk</a>
+                <a href="#services"
+                    class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Layanan</a>
+                <a href="#contact"
+                    class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Kontak</a>
             </div>
         </div>
     </nav>
@@ -376,20 +381,24 @@ if (empty($_SESSION['csrf_token'])) {
                         Tambak Udang <span class="text-secondary-600 dark:text-secondary-400">Tegal</span>
                     </h1>
                     <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-                        UMKM tambak udang terpercaya di Tegal yang menghadirkan udang segar berkualitas tinggi dengan teknologi modern dan ramah lingkungan untuk kebutuhan kuliner Anda.
+                        UMKM tambak udang terpercaya di Tegal yang menghadirkan udang segar berkualitas tinggi dengan
+                        teknologi modern dan ramah lingkungan untuk kebutuhan kuliner Anda.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="#products" class="inline-flex items-center justify-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-xl transition-colors shadow-lg hover:shadow-xl">
+                        <a href="#products"
+                            class="inline-flex items-center justify-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-xl transition-colors shadow-lg hover:shadow-xl">
                             <i class="fas fa-fish mr-2"></i>
                             Lihat Produk
                         </a>
-                        <a href="https://wa.me/6285864138261?text=Halo%20Vannabox%20%F0%9F%91%8B%0ASaya%20ingin%20konsultasi/pemesanan%20Udang%20Vaname.%0ADetail:%0A-%20Ukuran:%20[30-40%20%7C%2050-70%20%7C%2080-100]%0A-%20Jumlah:%20__%20kg%0A-%20Nama:%20__%0A-%20Alamat:%20__%0A%0ATerima%20kasih!" target="_blank" rel="noopener" class="inline-flex items-center justify-center px-8 py-4 border-2 border-primary-600 text-primary-600 dark:text-primary-400 hover:bg-primary-600 hover:text-white font-semibold rounded-xl transition-colors">
+                        <a href="https://wa.me/6285864138261?text=Halo%20Vannabox%20%F0%9F%91%8B%0ASaya%20ingin%20konsultasi/pemesanan%20Udang%20Vaname.%0ADetail:%0A-%20Ukuran:%20[30-40%20%7C%2050-70%20%7C%2080-100]%0A-%20Jumlah:%20__%20kg%0A-%20Nama:%20__%0A-%20Alamat:%20__%0A%0ATerima%20kasih!"
+                            target="_blank" rel="noopener"
+                            class="inline-flex items-center justify-center px-8 py-4 border-2 border-primary-600 text-primary-600 dark:text-primary-400 hover:bg-primary-600 hover:text-white font-semibold rounded-xl transition-colors">
                             <i class="fas fa-phone mr-2"></i>
                             Hubungi Kami
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="relative">
                     <div class="floating">
                         <div class="bg-gradient-to-br from-primary-500 to-secondary-500 rounded-3xl p-8 shadow-2xl">
@@ -417,12 +426,14 @@ if (empty($_SESSION['csrf_token'])) {
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Floating Icons -->
-                    <div class="absolute -top-4 -right-4 bg-yellow-400 text-yellow-900 p-3 rounded-full shadow-lg floating" style="animation-delay: 0.5s;">
+                    <div class="absolute -top-4 -right-4 bg-yellow-400 text-yellow-900 p-3 rounded-full shadow-lg floating"
+                        style="animation-delay: 0.5s;">
                         <i class="fas fa-star text-xl"></i>
                     </div>
-                    <div class="absolute -bottom-4 -left-4 bg-blue-400 text-blue-900 p-3 rounded-full shadow-lg floating" style="animation-delay: 1s;">
+                    <div class="absolute -bottom-4 -left-4 bg-blue-400 text-blue-900 p-3 rounded-full shadow-lg floating"
+                        style="animation-delay: 1s;">
                         <i class="fas fa-fish text-xl"></i>
                     </div>
                 </div>
@@ -438,36 +449,43 @@ if (empty($_SESSION['csrf_token'])) {
                     Tentang <span class="text-primary-600 dark:text-primary-400">Vannabox</span>
                 </h2>
                 <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                    Kami adalah UMKM tambak udang yang berkomitmen menghadirkan udang segar berkualitas tinggi dari Tegal untuk memenuhi kebutuhan kuliner Indonesia.
+                    Kami adalah UMKM tambak udang yang berkomitmen menghadirkan udang segar berkualitas tinggi dari
+                    Tegal untuk memenuhi kebutuhan kuliner Indonesia.
                 </p>
             </div>
-            
+
             <div class="grid lg:grid-cols-3 gap-8 mb-16">
-                <div class="bg-gray-50 dark:bg-gray-700 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
-                    <div class="bg-primary-100 dark:bg-primary-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div class="bg-gray-50 dark:bg-gray-700 rounded-2xl p-8 text-center card-hover">
+                    <div
+                        class="bg-primary-100 dark:bg-primary-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-history text-2xl text-primary-600 dark:text-primary-400"></i>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Pengalaman Bertahun-tahun</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Dengan pengalaman lebih dari 10 tahun dalam budidaya udang, kami memahami setiap detail untuk menghasilkan udang berkualitas premium.</p>
+                    <p class="text-gray-600 dark:text-gray-300">Dengan pengalaman lebih dari 10 tahun dalam budidaya
+                        udang, kami memahami setiap detail untuk menghasilkan udang berkualitas premium.</p>
                 </div>
-                
-                <div class="bg-gray-50 dark:bg-gray-700 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
-                    <div class="bg-secondary-100 dark:bg-secondary-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+
+                <div class="bg-gray-50 dark:bg-gray-700 rounded-2xl p-8 text-center card-hover">
+                    <div
+                        class="bg-secondary-100 dark:bg-secondary-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-microscope text-2xl text-secondary-600 dark:text-secondary-400"></i>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Teknologi Modern</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Menggunakan teknologi bioflok dan sistem monitoring otomatis untuk menjaga kualitas air dan kesehatan udang secara optimal.</p>
+                    <p class="text-gray-600 dark:text-gray-300">Menggunakan teknologi bioflok dan sistem monitoring
+                        otomatis untuk menjaga kualitas air dan kesehatan udang secara optimal.</p>
                 </div>
-                
-                <div class="bg-gray-50 dark:bg-gray-700 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
-                    <div class="bg-yellow-100 dark:bg-yellow-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+
+                <div class="bg-gray-50 dark:bg-gray-700 rounded-2xl p-8 text-center card-hover">
+                    <div
+                        class="bg-yellow-100 dark:bg-yellow-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-certificate text-2xl text-yellow-600 dark:text-yellow-400"></i>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Sertifikasi Halal</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Produk kami telah tersertifikasi halal dan memenuhi standar keamanan pangan nasional untuk kepercayaan konsumen.</p>
+                    <p class="text-gray-600 dark:text-gray-300">Produk kami telah tersertifikasi halal dan memenuhi
+                        standar keamanan pangan nasional untuk kepercayaan konsumen.</p>
                 </div>
             </div>
-            
+
             <div class="bg-gradient-to-r from-primary-600 to-secondary-600 rounded-3xl p-8 md:p-12 text-white">
                 <div class="grid md:grid-cols-4 gap-8 text-center">
                     <div>
@@ -499,7 +517,8 @@ if (empty($_SESSION['csrf_token'])) {
                     Mengapa <span class="text-primary-600 dark:text-primary-400">Udang Vaname</span>?
                 </h2>
                 <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                    Udang Vaname (Litopenaeus vannamei) adalah spesies udang unggulan yang menjadi fokus utama budidaya kami dengan berbagai keunggulan luar biasa.
+                    Udang Vaname (Litopenaeus vannamei) adalah spesies udang unggulan yang menjadi fokus utama budidaya
+                    kami dengan berbagai keunggulan luar biasa.
                 </p>
             </div>
 
@@ -525,13 +544,15 @@ if (empty($_SESSION['csrf_token'])) {
                             </div>
                         </div>
                     </div>
-                    
+
                     <div>
                         <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Tentang Udang Vaname</h3>
                         <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                            Udang Vaname adalah spesies udang putih yang berasal dari pantai Pasifik Amerika Latin. Dikenal sebagai "King of Shrimp" karena kualitas dagingnya yang superior, pertumbuhan cepat, dan adaptabilitas tinggi terhadap berbagai kondisi lingkungan.
+                            Udang Vaname adalah spesies udang putih yang berasal dari pantai Pasifik Amerika Latin.
+                            Dikenal sebagai "King of Shrimp" karena kualitas dagingnya yang superior, pertumbuhan cepat,
+                            dan adaptabilitas tinggi terhadap berbagai kondisi lingkungan.
                         </p>
-                        
+
                         <div class="space-y-4">
                             <div class="flex items-start space-x-3">
                                 <div class="bg-green-100 dark:bg-green-900 p-2 rounded-lg">
@@ -539,27 +560,30 @@ if (empty($_SESSION['csrf_token'])) {
                                 </div>
                                 <div>
                                     <h4 class="font-semibold text-gray-900 dark:text-white">Genetik Unggul</h4>
-                                    <p class="text-gray-600 dark:text-gray-300 text-sm">Strain genetik terpilih dengan tingkat survival rate tinggi dan pertumbuhan optimal</p>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm">Strain genetik terpilih dengan
+                                        tingkat survival rate tinggi dan pertumbuhan optimal</p>
                                 </div>
                             </div>
-                            
+
                             <div class="flex items-start space-x-3">
                                 <div class="bg-blue-100 dark:bg-blue-900 p-2 rounded-lg">
                                     <i class="fas fa-water text-blue-600 dark:text-blue-400"></i>
                                 </div>
                                 <div>
                                     <h4 class="font-semibold text-gray-900 dark:text-white">Adaptasi Lingkungan</h4>
-                                    <p class="text-gray-600 dark:text-gray-300 text-sm">Mampu beradaptasi dengan baik di berbagai kondisi salinitas dan suhu air</p>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm">Mampu beradaptasi dengan baik di
+                                        berbagai kondisi salinitas dan suhu air</p>
                                 </div>
                             </div>
-                            
+
                             <div class="flex items-start space-x-3">
                                 <div class="bg-purple-100 dark:bg-purple-900 p-2 rounded-lg">
                                     <i class="fas fa-chart-line text-purple-600 dark:text-purple-400"></i>
                                 </div>
                                 <div>
                                     <h4 class="font-semibold text-gray-900 dark:text-white">Pertumbuhan Cepat</h4>
-                                    <p class="text-gray-600 dark:text-gray-300 text-sm">Mencapai ukuran panen dalam 90-120 hari dengan FCR (Feed Conversion Ratio) efisien</p>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm">Mencapai ukuran panen dalam
+                                        90-120 hari dengan FCR (Feed Conversion Ratio) efisien</p>
                                 </div>
                             </div>
                         </div>
@@ -570,51 +594,66 @@ if (empty($_SESSION['csrf_token'])) {
             <!-- Advantages Grid -->
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                 <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                    <div class="bg-red-100 dark:bg-red-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div
+                        class="bg-red-100 dark:bg-red-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-heart text-2xl text-red-600 dark:text-red-400"></i>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3 text-center">Kaya Protein</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-center">Mengandung protein tinggi (18-20g per 100g) dengan asam amino esensial lengkap untuk pertumbuhan dan perbaikan sel tubuh.</p>
+                    <p class="text-gray-600 dark:text-gray-300 text-center">Mengandung protein tinggi (18-20g per 100g)
+                        dengan asam amino esensial lengkap untuk pertumbuhan dan perbaikan sel tubuh.</p>
                 </div>
-                
+
                 <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                    <div class="bg-orange-100 dark:bg-orange-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div
+                        class="bg-orange-100 dark:bg-orange-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-brain text-2xl text-orange-600 dark:text-orange-400"></i>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3 text-center">Omega-3 Tinggi</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-center">Sumber omega-3 EPA dan DHA yang baik untuk kesehatan jantung, otak, dan mengurangi inflamasi.</p>
+                    <p class="text-gray-600 dark:text-gray-300 text-center">Sumber omega-3 EPA dan DHA yang baik untuk
+                        kesehatan jantung, otak, dan mengurangi inflamasi.</p>
                 </div>
-                
+
                 <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                    <div class="bg-green-100 dark:bg-green-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div
+                        class="bg-green-100 dark:bg-green-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-leaf text-2xl text-green-600 dark:text-green-400"></i>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3 text-center">Rendah Kalori</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-center">Hanya 85 kalori per 100g, ideal untuk diet sehat dan program penurunan berat badan.</p>
+                    <p class="text-gray-600 dark:text-gray-300 text-center">Hanya 85 kalori per 100g, ideal untuk diet
+                        sehat dan program penurunan berat badan.</p>
                 </div>
-                
+
                 <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                    <div class="bg-blue-100 dark:bg-blue-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div
+                        class="bg-blue-100 dark:bg-blue-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-shield-alt text-2xl text-blue-600 dark:text-blue-400"></i>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3 text-center">Antioksidan Alami</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-center">Mengandung astaxanthin dan selenium yang berperan sebagai antioksidan untuk melawan radikal bebas.</p>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3 text-center">Antioksidan Alami
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-center">Mengandung astaxanthin dan selenium yang
+                        berperan sebagai antioksidan untuk melawan radikal bebas.</p>
                 </div>
-                
+
                 <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                    <div class="bg-purple-100 dark:bg-purple-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div
+                        class="bg-purple-100 dark:bg-purple-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-bone text-2xl text-purple-600 dark:text-purple-400"></i>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3 text-center">Mineral Penting</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-center">Kaya akan zinc, fosfor, dan magnesium yang penting untuk kesehatan tulang dan sistem imun.</p>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3 text-center">Mineral Penting
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-center">Kaya akan zinc, fosfor, dan magnesium yang
+                        penting untuk kesehatan tulang dan sistem imun.</p>
                 </div>
-                
+
                 <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                    <div class="bg-pink-100 dark:bg-pink-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div
+                        class="bg-pink-100 dark:bg-pink-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-utensils text-2xl text-pink-600 dark:text-pink-400"></i>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3 text-center">Tekstur Premium</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-center">Daging kenyal, manis alami, dan tidak amis. Cocok untuk berbagai metode masak dari tumis hingga grill.</p>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3 text-center">Tekstur Premium
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-center">Daging kenyal, manis alami, dan tidak amis.
+                        Cocok untuk berbagai metode masak dari tumis hingga grill.</p>
                 </div>
             </div>
 
@@ -623,38 +662,46 @@ if (empty($_SESSION['csrf_token'])) {
                 <h3 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
                     Proses Budidaya <span class="text-primary-600 dark:text-primary-400">Berkualitas</span>
                 </h3>
-                
+
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div class="text-center">
-                        <div class="bg-gradient-to-br from-blue-500 to-blue-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div
+                            class="bg-gradient-to-br from-blue-500 to-blue-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-seedling text-3xl text-white"></i>
                         </div>
                         <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Benih Berkualitas</h4>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm">Benur SPF (Specific Pathogen Free) dari hatchery bersertifikat dengan tingkat survival rate >85%</p>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Benur SPF (Specific Pathogen Free) dari
+                            hatchery bersertifikat dengan tingkat survival rate >85%</p>
                     </div>
-                    
+
                     <div class="text-center">
-                        <div class="bg-gradient-to-br from-green-500 to-green-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div
+                            class="bg-gradient-to-br from-green-500 to-green-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-microscope text-3xl text-white"></i>
                         </div>
                         <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Teknologi Bioflok</h4>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm">Sistem bioflok untuk menjaga kualitas air optimal dan mengurangi dampak lingkungan</p>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Sistem bioflok untuk menjaga kualitas air
+                            optimal dan mengurangi dampak lingkungan</p>
                     </div>
-                    
+
                     <div class="text-center">
-                        <div class="bg-gradient-to-br from-yellow-500 to-yellow-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div
+                            class="bg-gradient-to-br from-yellow-500 to-yellow-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-chart-line text-3xl text-white"></i>
                         </div>
                         <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Monitoring 24/7</h4>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm">Pemantauan kualitas air, pH, oksigen, dan suhu secara real-time menggunakan sensor IoT</p>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Pemantauan kualitas air, pH, oksigen, dan
+                            suhu secara real-time menggunakan sensor IoT</p>
                     </div>
-                    
+
                     <div class="text-center">
-                        <div class="bg-gradient-to-br from-purple-500 to-purple-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div
+                            class="bg-gradient-to-br from-purple-500 to-purple-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-award text-3xl text-white"></i>
                         </div>
                         <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Panen Optimal</h4>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm">Panen pada ukuran dan waktu optimal untuk menjamin kualitas dan kesegaran terbaik</p>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Panen pada ukuran dan waktu optimal untuk
+                            menjamin kualitas dan kesegaran terbaik</p>
                     </div>
                 </div>
             </div>
@@ -680,7 +727,7 @@ if (empty($_SESSION['csrf_token'])) {
                         <div class="text-sm opacity-90">Kolesterol per 100g</div>
                     </div>
                 </div>
-                
+
                 <div class="mt-8 grid md:grid-cols-3 gap-6 text-sm">
                     <div>
                         <h4 class="font-semibold mb-3">Vitamin & Mineral:</h4>
@@ -722,22 +769,42 @@ if (empty($_SESSION['csrf_token'])) {
                     Produk <span class="text-primary-600 dark:text-primary-400">Unggulan</span>
                 </h2>
                 <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                    Berbagai jenis udang segar berkualitas premium yang siap memenuhi kebutuhan kuliner Anda dengan cita rasa terbaik.
+                    Berbagai jenis udang segar berkualitas premium yang siap memenuhi kebutuhan kuliner Anda dengan cita
+                    rasa terbaik.
                 </p>
             </div>
-            
+
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Vaname 30-40 -->
-                <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                    <div class="h-48">
-                        <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=1200&q=60" alt="Udang Vaname 30-40" class="w-full h-48 object-cover" />
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="assets/images/Udang Vaname 30-40.webp" alt="Udang Vaname 30-40 - Kualitas Premium"
+                            class="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
+                            loading="lazy" />
+                        <div
+                            class="absolute top-3 left-3 bg-primary-600 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                            Premium
+                        </div>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-1">Udang Vaname 30-40</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">Kualitas premium, ukuran 30-40 ekor/kg.</p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-2">Kualitas premium, ukuran 30-40 ekor/kg.</p>
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                            </div>
+                            <span class="text-sm text-gray-500 dark:text-gray-400">(4.9) • Stok Tersedia</span>
+                        </div>
                         <div class="flex items-center justify-between">
                             <span class="text-2xl font-bold text-primary-600 dark:text-primary-400">110 rb/kg</span>
-                            <a href="https://wa.me/6285864138261?text=Halo%20Vannabox%20%F0%9F%91%8B%0ASaya%20ingin%20pesan%20Udang%20Vaname%2030-40.%0ADetail:%0A-%20Jumlah:%20__%20kg%0A-%20Nama:%20__%0A-%20Alamat:%20__%0A%0ATerima%20kasih!" target="_blank" rel="noopener" class="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg transition-colors inline-flex items-center">
+                            <a href="https://wa.me/6285864138261?text=Halo%20Vannabox%20%F0%9F%91%8B%0ASaya%20ingin%20pesan%20Udang%20Vaname%2030-40.%0ADetail:%0A-%20Jumlah:%20__%20kg%0A-%20Nama:%20__%0A-%20Alamat:%20__%0A%0ATerima%20kasih!"
+                                target="_blank" rel="noopener"
+                                class="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg transition-colors inline-flex items-center">
                                 <i class="fas fa-cart-plus mr-1"></i> Pesan via WA
                             </a>
                         </div>
@@ -745,16 +812,35 @@ if (empty($_SESSION['csrf_token'])) {
                 </div>
 
                 <!-- Vaname 50-70 -->
-                <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                    <div class="h-48">
-                        <img src="https://images.unsplash.com/photo-1604908812030-1e3c2ac1699e?auto=format&fit=crop&w=1200&q=60" alt="Udang Vaname 50-70" class="w-full h-48 object-cover" />
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="assets/images/Udang Vaname 50-70.webp" alt="Udang Vaname 50-70 - Segar dan Siap Olah"
+                            class="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
+                            loading="lazy" />
+                        <div
+                            class="absolute top-3 left-3 bg-secondary-600 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                            Populer
+                        </div>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-1">Udang Vaname 50-70</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">Ukuran 50-70 ekor/kg, segar dan siap olah.</p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-2">Ukuran 50-70 ekor/kg, segar dan siap olah.</p>
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                            </div>
+                            <span class="text-sm text-gray-500 dark:text-gray-400">(4.8) • Stok Tersedia</span>
+                        </div>
                         <div class="flex items-center justify-between">
                             <span class="text-2xl font-bold text-primary-600 dark:text-primary-400">95 rb/kg</span>
-                            <a href="https://wa.me/6285864138261?text=Halo%20Vannabox%20%F0%9F%91%8B%0ASaya%20ingin%20pesan%20Udang%20Vaname%2050-70.%0ADetail:%0A-%20Jumlah:%20__%20kg%0A-%20Nama:%20__%0A-%20Alamat:%20__%0A%0ATerima%20kasih!" target="_blank" rel="noopener" class="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg transition-colors inline-flex items-center">
+                            <a href="https://wa.me/6285864138261?text=Halo%20Vannabox%20%F0%9F%91%8B%0ASaya%20ingin%20pesan%20Udang%20Vaname%2050-70.%0ADetail:%0A-%20Jumlah:%20__%20kg%0A-%20Nama:%20__%0A-%20Alamat:%20__%0A%0ATerima%20kasih!"
+                                target="_blank" rel="noopener"
+                                class="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg transition-colors inline-flex items-center">
                                 <i class="fas fa-cart-plus mr-1"></i> Pesan via WA
                             </a>
                         </div>
@@ -762,25 +848,46 @@ if (empty($_SESSION['csrf_token'])) {
                 </div>
 
                 <!-- Vaname 80-100 -->
-                <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                    <div class="h-48">
-                        <img src="https://images.unsplash.com/photo-1615141982883-6f6561f711c7?auto=format&fit=crop&w=1200&q=60" alt="Udang Vaname 80-100" class="w-full h-48 object-cover" />
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="assets/images/Udang 80-100.webp" alt="Udang Vaname 80-100 - Ukuran Ekonomis"
+                            class="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
+                            loading="lazy" />
+                        <div
+                            class="absolute top-3 left-3 bg-orange-600 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                            Ekonomis
+                        </div>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-1">Udang Vaname 80-100</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">Ukuran ekonomis 80-100 ekor/kg.</p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-2">Ukuran ekonomis 80-100 ekor/kg.</p>
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star-half-alt text-sm"></i>
+                            </div>
+                            <span class="text-sm text-gray-500 dark:text-gray-400">(4.7) • Stok Tersedia</span>
+                        </div>
                         <div class="flex items-center justify-between">
                             <span class="text-2xl font-bold text-primary-600 dark:text-primary-400">75 rb/kg</span>
-                            <a href="https://wa.me/6285864138261?text=Halo%20Vannabox%20%F0%9F%91%8B%0ASaya%20ingin%20pesan%20Udang%20Vaname%2080-100.%0ADetail:%0A-%20Jumlah:%20__%20kg%0A-%20Nama:%20__%0A-%20Alamat:%20__%0A%0ATerima%20kasih!" target="_blank" rel="noopener" class="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg transition-colors inline-flex items-center">
+                            <a href="https://wa.me/6285864138261?text=Halo%20Vannabox%20%F0%9F%91%8B%0ASaya%20ingin%20pesan%20Udang%20Vaname%2080-100.%0ADetail:%0A-%20Jumlah:%20__%20kg%0A-%20Nama:%20__%0A-%20Alamat:%20__%0A%0ATerima%20kasih!"
+                                target="_blank" rel="noopener"
+                                class="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg transition-colors inline-flex items-center">
                                 <i class="fas fa-cart-plus mr-1"></i> Pesan via WA
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="text-center mt-12">
-                <a href="https://wa.me/6285864138261?text=Halo%20Vannabox%20%F0%9F%91%8B%0ASaya%20ingin%20konsultasi/pemesanan%20Udang%20Vaname.%0ADetail:%0A-%20Ukuran:%20[30-40%20%7C%2050-70%20%7C%2080-100]%0A-%20Jumlah:%20__%20kg%0A-%20Nama:%20__%0A-%20Alamat:%20__%0A%0ATerima%20kasih!" target="_blank" rel="noopener" class="inline-flex items-center px-8 py-4 bg-secondary-600 hover:bg-secondary-700 text-white font-semibold rounded-xl transition-colors shadow-lg">
+                <a href="https://wa.me/6285864138261?text=Halo%20Vannabox%20%F0%9F%91%8B%0ASaya%20ingin%20konsultasi/pemesanan%20Udang%20Vaname.%0ADetail:%0A-%20Ukuran:%20[30-40%20%7C%2050-70%20%7C%2080-100]%0A-%20Jumlah:%20__%20kg%0A-%20Nama:%20__%0A-%20Alamat:%20__%0A%0ATerima%20kasih!"
+                    target="_blank" rel="noopener"
+                    class="inline-flex items-center px-8 py-4 bg-secondary-600 hover:bg-secondary-700 text-white font-semibold rounded-xl transition-colors shadow-lg">
                     <i class="fas fa-phone mr-2"></i>
                     Konsultasi Pemesanan
                 </a>
@@ -796,41 +903,50 @@ if (empty($_SESSION['csrf_token'])) {
                     Layanan <span class="text-primary-600 dark:text-primary-400">Kami</span>
                 </h2>
                 <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                    Kami menyediakan berbagai layanan terbaik untuk memenuhi kebutuhan udang segar Anda dengan pelayanan profesional.
+                    Kami menyediakan berbagai layanan terbaik untuk memenuhi kebutuhan udang segar Anda dengan pelayanan
+                    profesional.
                 </p>
             </div>
-            
+
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="text-center group">
-                    <div class="bg-blue-100 dark:bg-blue-900 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                    <div
+                        class="bg-blue-100 dark:bg-blue-900 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                         <i class="fas fa-shipping-fast text-3xl text-blue-600 dark:text-blue-400"></i>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Pengiriman Cepat</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Pengiriman same day untuk area Tegal dan sekitarnya, menjaga kesegaran udang hingga sampai ke tangan Anda.</p>
+                    <p class="text-gray-600 dark:text-gray-300">Pengiriman same day untuk area Tegal dan sekitarnya,
+                        menjaga kesegaran udang hingga sampai ke tangan Anda.</p>
                 </div>
-                
+
                 <div class="text-center group">
-                    <div class="bg-green-100 dark:bg-green-900 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                    <div
+                        class="bg-green-100 dark:bg-green-900 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                         <i class="fas fa-snowflake text-3xl text-green-600 dark:text-green-400"></i>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Cold Chain</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Sistem rantai dingin terjaga dari tambak hingga konsumen untuk mempertahankan kualitas dan kesegaran optimal.</p>
+                    <p class="text-gray-600 dark:text-gray-300">Sistem rantai dingin terjaga dari tambak hingga konsumen
+                        untuk mempertahankan kualitas dan kesegaran optimal.</p>
                 </div>
-                
+
                 <div class="text-center group">
-                    <div class="bg-yellow-100 dark:bg-yellow-900 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                    <div
+                        class="bg-yellow-100 dark:bg-yellow-900 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                         <i class="fas fa-handshake text-3xl text-yellow-600 dark:text-yellow-400"></i>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Konsultasi Gratis</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Konsultasi gratis untuk pemilihan jenis udang sesuai kebutuhan kuliner dan budget Anda.</p>
+                    <p class="text-gray-600 dark:text-gray-300">Konsultasi gratis untuk pemilihan jenis udang sesuai
+                        kebutuhan kuliner dan budget Anda.</p>
                 </div>
-                
+
                 <div class="text-center group">
-                    <div class="bg-purple-100 dark:bg-purple-900 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                    <div
+                        class="bg-purple-100 dark:bg-purple-900 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                         <i class="fas fa-undo text-3xl text-purple-600 dark:text-purple-400"></i>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Garansi Kualitas</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Garansi 100% uang kembali jika produk tidak sesuai dengan standar kualitas yang dijanjikan.</p>
+                    <p class="text-gray-600 dark:text-gray-300">Garansi 100% uang kembali jika produk tidak sesuai
+                        dengan standar kualitas yang dijanjikan.</p>
                 </div>
             </div>
         </div>
@@ -847,7 +963,7 @@ if (empty($_SESSION['csrf_token'])) {
                     Siap melayani kebutuhan udang segar Anda. Hubungi kami sekarang untuk konsultasi dan pemesanan.
                 </p>
             </div>
-            
+
             <div class="grid lg:grid-cols-2 gap-12">
                 <div>
                     <div class="space-y-8">
@@ -857,20 +973,23 @@ if (empty($_SESSION['csrf_token'])) {
                             </div>
                             <div>
                                 <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Alamat</h3>
-                                <p class="text-gray-600 dark:text-gray-300">Jalan Timor Timur RT 9 RW 10, Kel. Panggung, Kec. Tegal Timur, Kota Tegal</p>
+                                <p class="text-gray-600 dark:text-gray-300">Jalan Timor Timur RT 9 RW 10, Kel. Panggung,
+                                    Kec. Tegal Timur, Kota Tegal</p>
                             </div>
                         </div>
-                        
+
                         <div class="flex items-start space-x-4">
                             <div class="bg-secondary-100 dark:bg-secondary-900 p-3 rounded-lg">
                                 <i class="fas fa-phone text-xl text-secondary-600 dark:text-secondary-400"></i>
                             </div>
                             <div>
                                 <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Telepon</h3>
-                                <a href="https://wa.me/6285864138261" target="_blank" rel="noopener" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400">+62 858-6413-8261</a>
+                                <a href="https://wa.me/6285864138261" target="_blank" rel="noopener"
+                                    class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400">+62
+                                    858-6413-8261</a>
                             </div>
                         </div>
-                        
+
                         <div class="flex items-start space-x-4">
                             <div class="bg-yellow-100 dark:bg-yellow-900 p-3 rounded-lg">
                                 <i class="fas fa-envelope text-xl text-yellow-600 dark:text-yellow-400"></i>
@@ -880,29 +999,33 @@ if (empty($_SESSION['csrf_token'])) {
                                 <p class="text-gray-600 dark:text-gray-300">vannaboxshrimp@gmail.com</p>
                             </div>
                         </div>
-                        
+
                         <div class="flex items-start space-x-4">
                             <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-lg">
                                 <i class="fas fa-clock text-xl text-blue-600 dark:text-blue-400"></i>
                             </div>
                             <div>
-                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Jam Operasional</h3>
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Jam Operasional
+                                </h3>
                                 <p class="text-gray-600 dark:text-gray-300">Senin - Sabtu: 06:00 - 18:00</p>
                                 <p class="text-gray-600 dark:text-gray-300">Minggu: 06:00 - 12:00</p>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="mt-8">
                         <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Ikuti Kami</h3>
                         <div class="flex space-x-4">
-                            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-lg transition-colors">
+                            <a href="#"
+                                class="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-lg transition-colors">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
-                            <a href="#" class="bg-pink-600 hover:bg-pink-700 text-white p-3 rounded-lg transition-colors">
+                            <a href="#"
+                                class="bg-pink-600 hover:bg-pink-700 text-white p-3 rounded-lg transition-colors">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="#" class="bg-green-600 hover:bg-green-700 text-white p-3 rounded-lg transition-colors">
+                            <a href="#"
+                                class="bg-green-600 hover:bg-green-700 text-white p-3 rounded-lg transition-colors">
                                 <i class="fab fa-whatsapp"></i>
                             </a>
                             <a href="#" class="bg-red-600 hover:bg-red-700 text-white p-3 rounded-lg transition-colors">
@@ -911,60 +1034,80 @@ if (empty($_SESSION['csrf_token'])) {
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
                     <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Kirim Pesan</h3>
                     <form id="contact-form" class="space-y-6" method="POST" action="#contact" novalidate>
                         <!-- CSRF Protection -->
-                        <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token'] ?? '', ENT_QUOTES, 'UTF-8'); ?>">
+                        <input type="hidden" name="csrf_token"
+                            value="<?php echo htmlspecialchars($_SESSION['csrf_token'] ?? '', ENT_QUOTES, 'UTF-8'); ?>">
                         <input type="hidden" name="form_type" value="contact">
-                        
+
                         <!-- Honeypot for bot protection -->
                         <div style="display: none;">
                             <label for="website">Website (leave blank):</label>
                             <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
                         </div>
-                        
+
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
-                                <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Nama *</label>
-                                <input type="text" id="name" name="name" required maxlength="100" pattern="[a-zA-Z\s]+" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Nama lengkap" autocomplete="name">
+                                <label for="name"
+                                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Nama
+                                    *</label>
+                                <input type="text" id="name" name="name" required maxlength="100" pattern="[a-zA-Z\s]+"
+                                    class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                                    placeholder="Nama lengkap" autocomplete="name">
                                 <div class="error-message text-red-500 text-sm mt-1 hidden"></div>
                             </div>
                             <div>
-                                <label for="phone" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Telepon *</label>
-                                <input type="tel" id="phone" name="phone" required pattern="[0-9+\-\s()]+" maxlength="20" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Nomor telepon" autocomplete="tel">
+                                <label for="phone"
+                                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Telepon
+                                    *</label>
+                                <input type="tel" id="phone" name="phone" required pattern="[0-9+\-\s()]+"
+                                    maxlength="20"
+                                    class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                                    placeholder="Nomor telepon" autocomplete="tel">
                                 <div class="error-message text-red-500 text-sm mt-1 hidden"></div>
                             </div>
                         </div>
                         <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email *</label>
-                            <input type="email" id="email" name="email" required maxlength="100" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Email address" autocomplete="email">
+                            <label for="email"
+                                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email *</label>
+                            <input type="email" id="email" name="email" required maxlength="100"
+                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                                placeholder="Email address" autocomplete="email">
                             <div class="error-message text-red-500 text-sm mt-1 hidden"></div>
                         </div>
                         <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Pesan *</label>
-                            <textarea id="message" name="message" rows="4" required maxlength="1000" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Tulis pesan Anda..."></textarea>
+                            <label for="message"
+                                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Pesan *</label>
+                            <textarea id="message" name="message" rows="4" required maxlength="1000"
+                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                                placeholder="Tulis pesan Anda..."></textarea>
                             <div class="error-message text-red-500 text-sm mt-1 hidden"></div>
                             <div class="text-sm text-gray-500 mt-1">
                                 <span id="char-count">0</span>/1000 karakter
                             </div>
                         </div>
-                        
+
                         <!-- reCAPTCHA placeholder (would need actual implementation) -->
                         <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg text-center">
                             <div class="flex items-center justify-center space-x-2">
-                                <input type="checkbox" id="captcha" name="captcha" required class="w-4 h-4 text-primary-600 bg-gray-100 border-gray-300 rounded focus:ring-primary-500">
-                                <label for="captcha" class="text-sm text-gray-700 dark:text-gray-300">Saya bukan robot</label>
+                                <input type="checkbox" id="captcha" name="captcha" required
+                                    class="w-4 h-4 text-primary-600 bg-gray-100 border-gray-300 rounded focus:ring-primary-500">
+                                <label for="captcha" class="text-sm text-gray-700 dark:text-gray-300">Saya bukan
+                                    robot</label>
                                 <i class="fas fa-shield-alt text-primary-600"></i>
                             </div>
                         </div>
-                        
+
                         <div class="text-xs text-gray-500 dark:text-gray-400">
-                            Dengan mengirim pesan ini, Anda menyetujui bahwa data Anda akan diproses sesuai dengan kebijakan privasi kami untuk merespons pertanyaan Anda.
+                            Dengan mengirim pesan ini, Anda menyetujui bahwa data Anda akan diproses sesuai dengan
+                            kebijakan privasi kami untuk merespons pertanyaan Anda.
                         </div>
-                        
-                        <button type="submit" id="submit-btn" class="w-full bg-primary-600 hover:bg-primary-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+
+                        <button type="submit" id="submit-btn"
+                            class="w-full bg-primary-600 hover:bg-primary-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition-colors">
                             <span class="submit-text">
                                 <i class="fas fa-paper-plane mr-2"></i>
                                 Kirim Pesan
@@ -990,7 +1133,8 @@ if (empty($_SESSION['csrf_token'])) {
                         <span class="text-2xl font-bold text-primary-400">Vannabox</span>
                     </div>
                     <p class="text-gray-300 mb-6 max-w-md">
-                        UMKM tambak udang terpercaya di Tegal yang menghadirkan udang segar berkualitas tinggi dengan teknologi modern dan ramah lingkungan.
+                        UMKM tambak udang terpercaya di Tegal yang menghadirkan udang segar berkualitas tinggi dengan
+                        teknologi modern dan ramah lingkungan.
                     </p>
                     <div class="flex space-x-4">
                         <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">
@@ -1007,18 +1151,23 @@ if (empty($_SESSION['csrf_token'])) {
                         </a>
                     </div>
                 </div>
-                
+
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Menu</h3>
                     <ul class="space-y-2">
-                        <li><a href="#home" class="text-gray-300 hover:text-primary-400 transition-colors">Beranda</a></li>
-                        <li><a href="#about" class="text-gray-300 hover:text-primary-400 transition-colors">Tentang</a></li>
-                        <li><a href="#products" class="text-gray-300 hover:text-primary-400 transition-colors">Produk</a></li>
-                        <li><a href="#services" class="text-gray-300 hover:text-primary-400 transition-colors">Layanan</a></li>
-                        <li><a href="#contact" class="text-gray-300 hover:text-primary-400 transition-colors">Kontak</a></li>
+                        <li><a href="#home" class="text-gray-300 hover:text-primary-400 transition-colors">Beranda</a>
+                        </li>
+                        <li><a href="#about" class="text-gray-300 hover:text-primary-400 transition-colors">Tentang</a>
+                        </li>
+                        <li><a href="#products"
+                                class="text-gray-300 hover:text-primary-400 transition-colors">Produk</a></li>
+                        <li><a href="#services"
+                                class="text-gray-300 hover:text-primary-400 transition-colors">Layanan</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-primary-400 transition-colors">Kontak</a>
+                        </li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Kontak</h3>
                     <ul class="space-y-2 text-gray-300">
@@ -1028,7 +1177,8 @@ if (empty($_SESSION['csrf_token'])) {
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-phone mr-2 text-primary-400"></i>
-                            <a href="https://wa.me/6285864138261" target="_blank" rel="noopener" class="text-gray-300 hover:text-primary-400">+62 858-6413-8261</a>
+                            <a href="https://wa.me/6285864138261" target="_blank" rel="noopener"
+                                class="text-gray-300 hover:text-primary-400">+62 858-6413-8261</a>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-envelope mr-2 text-primary-400"></i>
@@ -1037,7 +1187,7 @@ if (empty($_SESSION['csrf_token'])) {
                     </ul>
                 </div>
             </div>
-            
+
             <div class="border-t border-gray-800 mt-8 pt-8 text-center">
                 <p class="text-gray-400">
                     &copy; 2024 Vannabox. Semua hak cipta dilindungi. | Dibuat dengan ❤️ untuk UMKM Indonesia
@@ -1047,390 +1197,17 @@ if (empty($_SESSION['csrf_token'])) {
     </footer>
 
     <!-- Back to Top Button -->
-    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary-600 hover:bg-primary-700 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 bg-primary-600 hover:bg-primary-700 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <script>
-        // Theme Toggle Functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const themeToggle = document.getElementById('theme-toggle');
-            const themeToggleMobile = document.getElementById('theme-toggle-mobile');
-            const html = document.documentElement;
+    <!-- All JavaScript functionality moved to external files:
+         - Theme Toggle: assets/js/theme-toggle.js
+         - Main functionality: assets/js/main.js -->
 
-            // Check for saved theme preference or default to 'light'
-            const currentTheme = localStorage.getItem('theme') || 'light';
-            
-            // Apply initial theme
-            if (currentTheme === 'dark') {
-                html.classList.add('dark');
-            } else {
-                html.classList.remove('dark');
-            }
 
-            function toggleTheme() {
-                html.classList.toggle('dark');
-                const newTheme = html.classList.contains('dark') ? 'dark' : 'light';
-                localStorage.setItem('theme', newTheme);
-                
-                // Update icons visibility
-                updateThemeIcons();
-            }
 
-            function updateThemeIcons() {
-                const isDark = html.classList.contains('dark');
-                
-                // Update desktop toggle icons
-                const desktopSunIcon = themeToggle?.querySelector('.fas.fa-sun');
-                const desktopMoonIcon = themeToggle?.querySelector('.fas.fa-moon');
-                
-                if (desktopSunIcon && desktopMoonIcon) {
-                    if (isDark) {
-                        desktopSunIcon.classList.add('hidden');
-                        desktopMoonIcon.classList.remove('hidden');
-                    } else {
-                        desktopSunIcon.classList.remove('hidden');
-                        desktopMoonIcon.classList.add('hidden');
-                    }
-                }
-                
-                // Update mobile toggle icons
-                const mobileSunIcon = themeToggleMobile?.querySelector('.fas.fa-sun');
-                const mobileMoonIcon = themeToggleMobile?.querySelector('.fas.fa-moon');
-                
-                if (mobileSunIcon && mobileMoonIcon) {
-                    if (isDark) {
-                        mobileSunIcon.classList.add('hidden');
-                        mobileMoonIcon.classList.remove('hidden');
-                    } else {
-                        mobileSunIcon.classList.remove('hidden');
-                        mobileMoonIcon.classList.add('hidden');
-                    }
-                }
-            }
-
-            // Initialize icons on page load
-            updateThemeIcons();
-
-            // Add event listeners
-            if (themeToggle) {
-                themeToggle.addEventListener('click', toggleTheme);
-            }
-            
-            if (themeToggleMobile) {
-                themeToggleMobile.addEventListener('click', toggleTheme);
-            }
-        });
-
-        // Mobile Menu Toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Smooth Scrolling for Navigation Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    // Close mobile menu if open
-                    mobileMenu.classList.add('hidden');
-                }
-            });
-        });
-
-        // Back to Top Button
-        const backToTopButton = document.getElementById('back-to-top');
-
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.remove('opacity-0', 'invisible');
-                backToTopButton.classList.add('opacity-100', 'visible');
-            } else {
-                backToTopButton.classList.add('opacity-0', 'invisible');
-                backToTopButton.classList.remove('opacity-100', 'visible');
-            }
-        });
-
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // Enhanced Form Validation and Security
-        const contactForm = document.getElementById('contact-form');
-        const submitBtn = document.getElementById('submit-btn');
-        const charCount = document.getElementById('char-count');
-        const messageField = document.getElementById('message');
-
-        // Character counter for message field
-        if (messageField && charCount) {
-            messageField.addEventListener('input', function() {
-                const count = this.value.length;
-                charCount.textContent = count;
-                
-                if (count > 1000) {
-                    charCount.style.color = '#ef4444';
-                } else if (count > 800) {
-                    charCount.style.color = '#f59e0b';
-                } else {
-                    charCount.style.color = '#6b7280';
-                }
-            });
-        }
-
-        // Real-time validation
-        function validateField(field) {
-            const errorDiv = field.parentNode.querySelector('.error-message');
-            let isValid = true;
-            let errorMessage = '';
-
-            // Remove previous error styling
-            field.classList.remove('border-red-500');
-            if (errorDiv) {
-                errorDiv.classList.add('hidden');
-                errorDiv.textContent = '';
-            }
-
-            // Check if field is required and empty
-            if (field.hasAttribute('required') && !field.value.trim()) {
-                isValid = false;
-                errorMessage = 'Field ini wajib diisi.';
-            }
-
-            // Specific validations
-            switch (field.type) {
-                case 'email':
-                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    if (field.value && !emailRegex.test(field.value)) {
-                        isValid = false;
-                        errorMessage = 'Format email tidak valid.';
-                    }
-                    break;
-                case 'tel':
-                    const phoneRegex = /^[0-9+\-\s()]+$/;
-                    if (field.value && !phoneRegex.test(field.value)) {
-                        isValid = false;
-                        errorMessage = 'Format nomor telepon tidak valid.';
-                    }
-                    break;
-                case 'text':
-                    if (field.name === 'name') {
-                        const nameRegex = /^[a-zA-Z\s]+$/;
-                        if (field.value && !nameRegex.test(field.value)) {
-                            isValid = false;
-                            errorMessage = 'Nama hanya boleh berisi huruf dan spasi.';
-                        }
-                    }
-                    break;
-            }
-
-            // Check maxlength
-            if (field.hasAttribute('maxlength') && field.value.length > parseInt(field.getAttribute('maxlength'))) {
-                isValid = false;
-                errorMessage = `Maksimal ${field.getAttribute('maxlength')} karakter.`;
-            }
-
-            // Show error if invalid
-            if (!isValid) {
-                field.classList.add('border-red-500');
-                if (errorDiv) {
-                    errorDiv.textContent = errorMessage;
-                    errorDiv.classList.remove('hidden');
-                }
-            }
-
-            return isValid;
-        }
-
-        // Add real-time validation to all form fields
-        if (contactForm) {
-            const formFields = contactForm.querySelectorAll('input[required], textarea[required]');
-            formFields.forEach(field => {
-                field.addEventListener('blur', () => validateField(field));
-                field.addEventListener('input', () => {
-                    if (field.classList.contains('border-red-500')) {
-                        validateField(field);
-                    }
-                });
-            });
-        }
-
-        // Enhanced form submission: open WhatsApp with prefilled message
-        if (contactForm) {
-            contactForm.addEventListener('submit', async function(e) {
-                e.preventDefault();
-
-                // Validate all fields
-                const formFields = this.querySelectorAll('input[required], textarea[required]');
-                let isFormValid = true;
-                formFields.forEach(field => { if (!validateField(field)) isFormValid = false; });
-
-                // Honeypot (bot protection)
-                const honeypot = this.querySelector('input[name="website"]');
-                if (honeypot && honeypot.value) { return; }
-
-                // Check CAPTCHA (client-side only)
-                const captcha = this.querySelector('input[name="captcha"]');
-                if (!captcha || !captcha.checked) {
-                    alert('Silakan centang "Saya bukan robot"');
-                    return;
-                }
-
-                if (!isFormValid) {
-                    alert('Mohon perbaiki kesalahan pada form sebelum mengirim.');
-                    return;
-                }
-
-                const submitText = submitBtn.querySelector('.submit-text');
-                const loadingText = submitBtn.querySelector('.loading-text');
-                submitBtn.disabled = true;
-                submitText.classList.add('hidden');
-                loadingText.classList.remove('hidden');
-
-                // Prepare payload
-                const payload = {
-                    name: this.querySelector('input[name="name"]').value.trim(),
-                    phone: this.querySelector('input[name="phone"]').value.trim(),
-                    email: this.querySelector('input[name="email"]').value.trim(),
-                    message: this.querySelector('textarea[name="message"]').value.trim(),
-                    website: honeypot ? honeypot.value : '',
-                    csrf_token: this.querySelector('input[name="csrf_token"]').value
-                };
-
-                try {
-                    // Build WhatsApp message and open WA
-                    const msg = [
-                    'Halo Vannabox 👋',
-                    'Saya ingin konsultasi/pemesanan Udang Vaname.',
-                    '',
-                    'Detail Kontak:',
-                    `- Nama: ${payload.name}`,
-                    `- Telepon: ${payload.phone}`,
-                    `- Email: ${payload.email}`,
-                    '',
-                    'Pesan:',
-                    payload.message || '-',
-                    '',
-                    'Terima kasih!'
-                    ].join('\n');
-                    const waUrl = 'https://wa.me/6285864138261?text=' + encodeURIComponent(msg);
-                    window.open(waUrl, '_blank');
-                    
-                    // Reset loading state and form
-                    submitBtn.disabled = false;
-                    submitText.classList.remove('hidden');
-                    loadingText.classList.add('hidden');
-                    this.reset();
-                    if (captcha) captcha.checked = false;
-                    if (charCount) charCount.textContent = '0';
-                    formFields.forEach(field => {
-                    field.classList.remove('border-red-500');
-                    const errorDiv = field.parentNode.querySelector('.error-message');
-                    if (errorDiv) errorDiv.classList.add('hidden');
-                    });
-                    }
-            });
-        }
-
-        // Security: Allow right-click, only restrict on sensitive elements (images, forms)
-        document.addEventListener('contextmenu', function(e) {
-            if (e.target.tagName === 'IMG' || e.target.closest('form')) {
-                e.preventDefault();
-            }
-        });
-
-        // Blokir shortcut umum untuk Inspect/Source/Console
-        document.addEventListener('keydown', function(e) {
-            // F12
-            if (e.keyCode === 123) { e.preventDefault(); return false; }
-            // Ctrl/Cmd + Shift + I/J/C
-            if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67)) {
-                e.preventDefault(); return false;
-            }
-            // Ctrl/Cmd + U (View Source), S (Save), P (Print)
-            if ((e.ctrlKey || e.metaKey) && (e.keyCode === 85 || e.keyCode === 83 || e.keyCode === 80)) {
-                e.preventDefault(); return false;
-            }
-        });
-
-        // Deteksi DevTools sederhana dan tampilkan overlay peringatan
-        (function(){
-            const threshold = 160; // ambang selisih inner vs outer window
-            setInterval(function(){
-                try {
-                    const opened = (window.outerWidth - window.innerWidth > threshold) || (window.outerHeight - window.innerHeight > threshold);
-                    let overlay = document.getElementById('devtools-block');
-                    if (opened) {
-                        if (!overlay) {
-                            overlay = document.createElement('div');
-                            overlay.id = 'devtools-block';
-                            overlay.style.cssText = 'position:fixed;inset:0;background:#000;opacity:.95;color:#fff;z-index:99999;display:flex;align-items:center;justify-content:center;font:600 18px/1.4 Inter,Arial,sans-serif;text-align:center;padding:24px;';
-                            overlay.textContent = 'Akses dibatasi. Tutup developer tools untuk melanjutkan.';
-                            document.body.appendChild(overlay);
-                        }
-                    } else if (overlay) {
-                        overlay.remove();
-                    }
-                } catch(_) {}
-            }, 500);
-        })();
-
-        // Security: Disable text selection on logo
-        document.querySelectorAll('img[alt*="Logo"]').forEach(img => {
-            img.style.userSelect = 'none';
-            img.style.webkitUserSelect = 'none';
-            img.style.mozUserSelect = 'none';
-            img.style.msUserSelect = 'none';
-        });
-
-        // Performance: Lazy loading for images
-        if ('IntersectionObserver' in window) {
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        if (img.dataset.src) {
-                            img.src = img.dataset.src;
-                            img.removeAttribute('data-src');
-                            observer.unobserve(img);
-                        }
-                    }
-                });
-            });
-
-            document.querySelectorAll('img[data-src]').forEach(img => {
-                imageObserver.observe(img);
-            });
-        }
-
-        // Add fade-in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                }
-            });
-        }, observerOptions);
-
-        // Observe all sections
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
-        });
-    </script>
 </body>
+
 </html>
