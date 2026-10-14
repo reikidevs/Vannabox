@@ -1,0 +1,66 @@
+---
+// src/components/Hero.astro
+---
+
+<section id="home" class="pt-16 min-h-screen flex items-center hero-pattern">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="fade-in">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+          <span class="text-primary-600 dark:text-primary-400">Vannabox</span><br />
+          Tambak Udang <span class="text-secondary-600 dark:text-secondary-400">Tegal</span>
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          UMKM tambak udang terpercaya di Tegal yang menghadirkan udang segar berkualitas tinggi dengan teknologi modern dan ramah lingkungan untuk kebutuhan kuliner Anda.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#products" class="inline-flex items-center justify-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-xl transition-colors shadow-lg hover:shadow-xl">
+            <i class="fas fa-fish mr-2"></i>
+            Lihat Produk
+          </a>
+          <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 border-2 border-primary-600 text-primary-600 dark:text-primary-400 hover:bg-primary-600 hover:text-white font-semibold rounded-xl transition-colors">
+            <i class="fas fa-phone mr-2"></i>
+            Hubungi Kami
+          </a>
+        </div>
+      </div>
+      
+      <div class="relative">
+        <div class="floating">
+          <div class="bg-gradient-to-br from-primary-500 to-secondary-500 rounded-3xl p-8 shadow-2xl">
+            <div class="grid grid-cols-2 gap-6 text-white">
+              <div class="text-center">
+                <i class="fas fa-water text-4xl mb-3"></i>
+                <h3 class="text-2xl font-bold">100%</h3>
+                <p class="text-sm opacity-90">Air Bersih</p>
+              </div>
+              <div class="text-center">
+                <i class="fas fa-leaf text-4xl mb-3"></i>
+                <h3 class="text-2xl font-bold">Organik</h3>
+                <p class="text-sm opacity-90">Ramah Lingkungan</p>
+              </div>
+              <div class="text-center">
+                <i class="fas fa-award text-4xl mb-3"></i>
+                <h3 class="text-2xl font-bold">Premium</h3>
+                <p class="text-sm opacity-90">Kualitas Terbaik</p>
+              </div>
+              <div class="text-center">
+                <i class="fas fa-shipping-fast text-4xl mb-3"></i>
+                <h3 class="text-2xl font-bold">Fresh</h3>
+                <p class="text-sm opacity-90">Pengiriman Cepat</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Floating Icons -->
+        <div class="absolute -top-4 -right-4 bg-yellow-400 text-yellow-900 p-3 rounded-full shadow-lg floating" style="animation-delay: 0.5s;">
+          <i class="fas fa-star text-xl"></i>
+        </div>
+        <div class="absolute -bottom-4 -left-4 bg-blue-400 text-blue-900 p-3 rounded-full shadow-lg floating" style="animation-delay: 1s;">
+          <i class="fas fa-fish text-xl"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,128 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Products from '../components/Products.astro';
+import Services from '../components/Services.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+---
+
+<Layout 
+  title="Vannabox - UMKM Tambak Udang Tegal" 
+  description="Vannabox adalah UMKM tambak udang terpercaya di Tegal yang menyediakan udang segar berkualitas tinggi dengan teknologi modern dan ramah lingkungan."
+>
+  <!-- Navigation Header -->
+  <Navbar />
+
+  <main>
+    <!-- Hero Section -->
+    <Hero />
+
+    <!-- About Section -->
+    <About />
+
+    <!-- Products Section -->
+    <Products />
+
+    <!-- Services Section -->
+    <Services />
+
+    <!-- Contact Section -->
+    <Contact />
+  </main>
+
+  <!-- Footer -->
+  <Footer />
+
+  <!-- Back to Top Button -->
+  <button 
+    id="back-to-top" 
+    class="fixed bottom-8 right-8 bg-primary-600 hover:bg-primary-700 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 z-40 focus:outline-none"
+    aria-label="Kembali ke atas"
+  >
+    <i class="fas fa-arrow-up"></i>
+  </button>
+</Layout>
+
+<script>
+  // Theme Toggle Functionality
+  const themeToggle = document.getElementById('theme-toggle');
+  const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+  const html = document.documentElement;
+
+  function toggleTheme() {
+    html.classList.toggle('dark');
+    const newTheme = html.classList.contains('dark') ? 'dark' : 'light';
+    localStorage.setItem('theme', newTheme);
+  }
+
+  themeToggle?.addEventListener('click', toggleTheme);
+  themeToggleMobile?.addEventListener('click', toggleTheme);
+
+  // Mobile Menu Toggle
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileMenuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+
+  // Smooth Scrolling for Navigation Links & closing mobile menu
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+          });
+          mobileMenu?.classList.add('hidden');
+        }
+      }
+    });
+  });
+
+  // Back to Top Button
+  const backToTopButton = document.getElementById('back-to-top');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTopButton?.classList.remove('opacity-0', 'invisible');
+      backToTopButton?.classList.add('opacity-100', 'visible');
+    } else {
+      backToTopButton?.classList.add('opacity-0', 'invisible');
+      backToTopButton?.classList.remove('opacity-100', 'visible');
+    }
+  });
+
+  backToTopButton?.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  });
+
+  // Fade-in animation on scroll using IntersectionObserver
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px',
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section').forEach((section) => {
+    observer.observe(section);
+  });
+</script>
