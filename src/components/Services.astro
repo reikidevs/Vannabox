@@ -12,47 +12,95 @@ const services = [
     icon: "fa-snowflake",
     iconBg: "bg-green-100 dark:bg-green-900",
     iconColor: "text-green-600 dark:text-green-400",
-    title: "Cold Chain",
-    desc: "Sistem rantai dingin terjaga dari tambak hingga konsumen untuk mempertahankan kualitas dan kesegaran optimal."
+    title: "Cold Chain Terpadu",
+    desc: "Sistem rantai dingin terjaga dari tambak, proses sortir, pengemasan thinwall ber-es, hingga freezer dan pengiriman."
   },
   {
     icon: "fa-handshake",
     iconBg: "bg-yellow-100 dark:bg-yellow-900",
     iconColor: "text-yellow-600 dark:text-yellow-400",
     title: "Konsultasi Gratis",
-    desc: "Konsultasi gratis untuk pemilihan jenis udang sesuai kebutuhan kuliner dan budget Anda."
+    desc: "Konsultasi gratis untuk pemilihan ukuran udang (size), estimasi kebutuhan katering, dan penyesuaian anggaran Anda."
   },
   {
     icon: "fa-undo",
     iconBg: "bg-purple-100 dark:bg-purple-900",
     iconColor: "text-purple-600 dark:text-purple-400",
-    title: "Garansi Kualitas",
-    desc: "Garansi 100% uang kembali jika produk tidak sesuai dengan standar kualitas yang dijanjikan."
+    title: "Garansi Mutu Segar",
+    desc: "Garansi penggantian produk jika udang yang diterima tidak memenuhi standar kesegaran prima kami."
   }
 ];
 ---
 
-<section id="services" class="py-20 bg-white dark:bg-gray-800">
+<section id="services" class="py-20 bg-white dark:bg-gray-800 transition-colors">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
       <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-        Layanan <span class="text-primary-600 dark:text-primary-400">Kami</span>
+        Layanan & Komitmen <span class="text-primary-600 dark:text-primary-400">Mutu</span>
       </h2>
-      <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-        Kami menyediakan berbagai layanan terbaik untuk memenuhi kebutuhan udang segar Anda dengan pelayanan profesional.
+      <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+        Kami memastikan setiap gram udang yang Anda nikmati diproses dengan higienis dan standar rantai dingin ketat untuk menjaga cita rasa manis alami udang Tegal.
       </p>
     </div>
     
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
       {services.map((service) => (
-        <div class="text-center group">
+        <div class="text-center group bg-gray-50 dark:bg-gray-700/40 p-8 rounded-2xl hover:shadow-lg transition-all border border-gray-100 dark:border-gray-700/50">
           <div class={`${service.iconBg} w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform`}>
             <i class={`fas ${service.icon} text-3xl ${service.iconColor}`}></i>
           </div>
           <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">{service.title}</h3>
-          <p class="text-gray-600 dark:text-gray-300">{service.desc}</p>
+          <p class="text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed">{service.desc}</p>
         </div>
       ))}
+    </div>
+
+    <!-- Cold Chain Feature Showcase with Real Photo -->
+    <div class="bg-gray-50 dark:bg-gray-900 rounded-3xl p-8 md:p-12 border border-gray-200 dark:border-gray-700 overflow-hidden">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-secondary-100 dark:bg-secondary-900/60 text-secondary-700 dark:text-secondary-300 font-semibold text-sm mb-4">
+            <i class="fas fa-temperature-low"></i>
+            <span>Teknologi Penyimpanan Higienis</span>
+          </div>
+          <h3 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">
+            Standar Rantai Dingin Vannabox: Mengunci Kesegaran Sejak Panen
+          </h3>
+          <p class="text-base text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+            Udang adalah komoditas bernilai tinggi yang sensitif terhadap suhu. Oleh karena itu, Vannabox menerapkan kemasan kotak plastik thinwall kedap udara bersuhu dingin terkendali, sehingga tekstur daging tetap padat, kenyal, dan tidak berbau amis ketika sampai di tangan konsumen.
+          </p>
+
+          <ul class="space-y-3.5 text-sm md:text-base text-gray-700 dark:text-gray-200">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-secondary-500 mt-1 mr-3 flex-shrink-0 text-base"></i>
+              <span><strong>Kemasan Thinwall Rapat:</strong> Mencegah kontaminasi udara dan memudahkan penataan di freezer rumah tangga maupun restoran.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-secondary-500 mt-1 mr-3 flex-shrink-0 text-base"></i>
+              <span><strong>Lapisan Es Kristal Bersih:</strong> Menjaga hidrasi alami udang tanpa merusak tekstur kulit dan daging.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-secondary-500 mt-1 mr-3 flex-shrink-0 text-base"></i>
+              <span><strong>Penyimpanan Freezer Terkontrol:</strong> Siap disimpan lama sebagai stok makanan beku higienis keluarga Anda.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="relative">
+          <div class="rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-gray-800">
+            <img 
+              src="/images/cold-chain-storage.jpg" 
+              alt="Penyimpanan Kotak Udang Vannabox di Freezer Suhu Terkontrol" 
+              class="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+          </div>
+          <div class="absolute -bottom-4 -right-4 bg-primary-600 text-white px-5 py-3 rounded-2xl shadow-xl hidden sm:block">
+            <div class="text-xs uppercase font-bold tracking-wider opacity-80">Standar Vannabox</div>
+            <div class="text-base font-bold">100% Higienis & Segar</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

@@ -2,14 +2,14 @@
 // src/components/Contact.astro
 ---
 
-<section id="contact" class="py-20 bg-gray-50 dark:bg-gray-900">
+<section id="contact" class="py-20 bg-gray-50 dark:bg-gray-900 transition-colors">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
       <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
         Hubungi <span class="text-primary-600 dark:text-primary-400">Kami</span>
       </h2>
-      <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-        Siap melayani kebutuhan udang segar Anda. Hubungi kami sekarang untuk konsultasi dan pemesanan.
+      <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+        Siap melayani kebutuhan udang segar Anda baik kemasan kotak plastik maupun grosir. Hubungi kami sekarang untuk pemesanan cepat.
       </p>
     </div>
     
@@ -21,8 +21,8 @@
               <i class="fas fa-map-marker-alt text-xl text-primary-600 dark:text-primary-400"></i>
             </div>
             <div>
-              <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Alamat</h3>
-              <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base">Jl. Tambak Udang No. 123, Tegal, Jawa Tengah 52114</p>
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Alamat Tambak & Kantor</h3>
+              <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base leading-relaxed">Jl. Tambak Udang No. 123, Tegal, Jawa Tengah 52114</p>
             </div>
           </div>
           
@@ -31,7 +31,7 @@
               <i class="fas fa-phone text-xl text-secondary-600 dark:text-secondary-400"></i>
             </div>
             <div>
-              <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Telepon</h3>
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Telepon / WhatsApp</h3>
               <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base">+62 812-3456-7890</p>
               <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base">+62 283-123-456</p>
             </div>
@@ -43,7 +43,7 @@
             </div>
             <div>
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Email</h3>
-              <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base">info@vannabox.com</p>
+              <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base">vannaboxtegal@gmail.com</p>
               <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base">order@vannabox.com</p>
             </div>
           </div>
@@ -54,14 +54,14 @@
             </div>
             <div>
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Jam Operasional</h3>
-              <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base">Senin - Sabtu: 06:00 - 18:00</p>
-              <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base">Minggu: 06:00 - 12:00</p>
+              <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base">Senin - Sabtu: 06:00 - 18:00 WIB</p>
+              <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base">Minggu: 06:00 - 12:00 WIB</p>
             </div>
           </div>
         </div>
         
         <div class="mt-8">
-          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Ikuti Kami</h3>
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Saluran Resmi</h3>
           <div class="flex space-x-4">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-lg transition-colors" aria-label="Facebook">
               <i class="fab fa-facebook-f"></i>
@@ -79,65 +79,93 @@
         </div>
       </div>
       
-      <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
-        <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Kirim Pesan</h3>
+      <div class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl border border-gray-100 dark:border-gray-700">
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Formulir Pemesanan</h3>
+        <p class="text-sm md:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Isi detail pesanan Anda di bawah ini untuk terhubung langsung dengan admin kami.
+        </p>
         
         <!-- Status message container -->
         <div id="form-feedback" class="hidden mb-6 p-4 rounded-xl text-sm font-medium transition-all"></div>
 
-        <form id="contact-form" class="space-y-6">
-          <div class="grid md:grid-cols-2 gap-6">
+        <form id="contact-form" class="space-y-5">
+          <div class="grid md:grid-cols-2 gap-5">
             <div>
-              <label for="input-nama" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Nama</label>
+              <label for="input-nama" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Nama Lengkap</label>
               <input 
                 id="input-nama" 
                 name="nama" 
                 type="text" 
                 required 
-                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm md:text-base outline-none transition" 
-                placeholder="Nama lengkap" 
+                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm md:text-base outline-none transition" 
+                placeholder="Contoh: Budi Santoso" 
               />
             </div>
             <div>
-              <label for="input-telepon" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Telepon</label>
+              <label for="input-telepon" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Nomor Telepon / WhatsApp</label>
               <input 
                 id="input-telepon" 
                 name="telepon" 
                 type="tel" 
                 required 
-                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm md:text-base outline-none transition" 
-                placeholder="Nomor WhatsApp/HP" 
+                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm md:text-base outline-none transition" 
+                placeholder="0812xxxxxxxx" 
               />
             </div>
           </div>
+
           <div>
-            <label for="input-email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email</label>
+            <label for="input-produk" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Pilihan Produk / Paket</label>
+            <select 
+              id="input-produk" 
+              name="produk" 
+              class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm md:text-base outline-none transition"
+            >
+              <option value="Udang Vaname Kotak Plastik (Rp 35.000 / ±220g Size ~70)" selected>
+                Udang Vaname Kotak Plastik (Rp 35.000 / ±220g Size ~70) - Rekomendasi
+              </option>
+              <option value="Udang Vaname Segar Kiloan (Rp 85.000 / kg Size 70)">
+                Udang Vaname Segar Kiloan (Rp 85.000 / Kg Size ~70)
+              </option>
+              <option value="Pasokan Grosir Tambak (Restoran & Katering)">
+                Pasokan Grosir Tambak (Restoran / Hotel / Katering)
+              </option>
+              <option value="Konsultasi Tambak & Layanan Lainnya">
+                Konsultasi & Pertanyaan Lainnya
+              </option>
+            </select>
+          </div>
+
+          <div>
+            <label for="input-email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Alamat Email (Opsional)</label>
             <input 
               id="input-email" 
               name="email" 
               type="email" 
-              class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm md:text-base outline-none transition" 
-              placeholder="Email address (opsional)" 
+              class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm md:text-base outline-none transition" 
+              placeholder="email@anda.com" 
             />
           </div>
+
           <div>
-            <label for="input-pesan" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Pesan</label>
+            <label for="input-pesan" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Catatan Pesanan / Alamat Pengiriman</label>
             <textarea 
               id="input-pesan" 
               name="pesan" 
-              rows="4" 
+              rows="3" 
               required 
-              class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm md:text-base outline-none transition" 
-              placeholder="Tulis pesan Anda..."
+              class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm md:text-base outline-none transition" 
+              placeholder="Contoh: Pesan 4 kotak plastik vaname, kirim ke Slawi Tegal..."
             ></textarea>
           </div>
+
           <button 
             type="submit" 
             id="submit-btn" 
-            class="w-full bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center space-x-2 shadow-md hover:shadow-lg disabled:opacity-50"
+            class="w-full bg-primary-600 hover:bg-primary-700 text-white font-bold py-3.5 px-6 rounded-xl transition-all flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl disabled:opacity-50 text-base"
           >
-            <i class="fas fa-paper-plane mr-2" id="submit-icon"></i>
-            <span id="submit-text">Kirim Pesan</span>
+            <i class="fab fa-whatsapp mr-2 text-xl text-emerald-300" id="submit-icon"></i>
+            <span id="submit-text">Kirim Pesanan ke WhatsApp</span>
           </button>
         </form>
       </div>
@@ -159,31 +187,38 @@
       const formData = new FormData(contactForm);
       const nama = (formData.get('nama') || '').toString().trim();
       const telepon = (formData.get('telepon') || '').toString().trim();
+      const produk = (formData.get('produk') || '').toString().trim();
       const email = (formData.get('email') || '').toString().trim();
       const pesan = (formData.get('pesan') || '').toString().trim();
 
       if (!nama || !telepon || !pesan) {
-        formFeedback.textContent = 'Mohon lengkapi Nama, Telepon, dan Pesan Anda.';
+        formFeedback.textContent = 'Mohon lengkapi Nama, Nomor Telepon/WhatsApp, dan Catatan Pesanan Anda.';
         formFeedback.className = 'mb-6 p-4 rounded-xl text-sm font-medium bg-rose-50 dark:bg-rose-950/50 text-rose-700 dark:text-rose-300 border border-rose-200 dark:border-rose-800';
         formFeedback.classList.remove('hidden');
         return;
       }
 
-      // Success feedback
+      // Format WhatsApp message
+      const waText = encodeURIComponent(
+        `Halo Vannabox, saya ingin memesan udang:\n\n` +
+        `👤 *Nama:* ${nama}\n` +
+        `📱 *WhatsApp:* ${telepon}\n` +
+        (email ? `✉️ *Email:* ${email}\n` : '') +
+        `🦐 *Produk:* ${produk}\n` +
+        `📝 *Catatan/Alamat:* ${pesan}\n\n` +
+        `Mohon konfirmasi ketersediaan stok & ongkirnya ya. Terima kasih!`
+      );
+
       formFeedback.innerHTML = `
         <div class="flex flex-col space-y-2">
-          <p class="font-semibold text-emerald-800 dark:text-emerald-200">✓ Terima kasih, ${nama}! Pesan Anda telah kami terima.</p>
-          <p class="text-xs text-emerald-700 dark:text-emerald-300">Tim Vannabox akan segera menghubungi nomor ${telepon}.</p>
+          <p class="font-bold text-emerald-800 dark:text-emerald-200">✓ Pesanan Anda Berhasil Disiapkan!</p>
+          <p class="text-sm text-emerald-700 dark:text-emerald-300">WhatsApp Anda akan terbuka otomatis untuk terhubung langsung dengan Admin Vannabox.</p>
         </div>
       `;
       formFeedback.className = 'mb-6 p-4 rounded-xl text-sm font-medium bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800';
       formFeedback.classList.remove('hidden');
 
-      // Pre-fill WhatsApp message option
-      const waText = encodeURIComponent(`Halo Vannabox, saya ${nama} (${telepon})${email ? ' - ' + email : ''}. Pesan saya: ${pesan}`);
       const waUrl = `https://wa.me/6281234567890?text=${waText}`;
-      
-      // Auto open WhatsApp in background or new tab if user wants direct response
       window.open(waUrl, '_blank');
 
       contactForm.reset();
