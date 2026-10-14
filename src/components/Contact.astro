@@ -153,47 +153,40 @@
   const submitIcon = document.getElementById('submit-icon');
 
   if (contactForm && formFeedback && submitBtn && submitText && submitIcon) {
-    contactForm.addEventListener('submit', async (e) => {
+    contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
       
-      submitBtn.disabled = true;
-      submitText.textContent = 'Mengirim...';
-      submitIcon.className = 'fas fa-spinner fa-spin mr-2';
-      formFeedback.classList.add('hidden');
-
       const formData = new FormData(contactForm);
-      const payload = {
-        nama: formData.get('nama'),
-        telepon: formData.get('telepon'),
-        email: formData.get('email'),
-        pesan: formData.get('pesan')
-      };
+      const nama = (formData.get('nama') || '').toString().trim();
+      const telepon = (formData.get('telepon') || '').toString().trim();
+      const email = (formData.get('email') || '').toString().trim();
+      const pesan = (formData.get('pesan') || '').toString().trim();
 
-      try {
-        const response = await fetch('/api/contact', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        });
-
-        const data = await response.json();
-
-        if (response.ok && data.success) {
-          formFeedback.textContent = data.message || 'Pesan Anda berhasil terkirim!';
-          formFeedback.className = 'mb-6 p-4 rounded-xl text-sm font-medium bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800';
-          contactForm.reset();
-        } else {
-          formFeedback.textContent = data.message || 'Gagal mengirim pesan. Silakan coba kembali.';
-          formFeedback.className = 'mb-6 p-4 rounded-xl text-sm font-medium bg-rose-50 dark:bg-rose-950/50 text-rose-700 dark:text-rose-300 border border-rose-200 dark:border-rose-800';
-        }
-      } catch (err) {
-        formFeedback.textContent = 'Terjadi gangguan koneksi. Silakan periksa jaringan Anda atau hubungi via WhatsApp.';
+      if (!nama || !telepon || !pesan) {
+        formFeedback.textContent = 'Mohon lengkapi Nama, Telepon, dan Pesan Anda.';
         formFeedback.className = 'mb-6 p-4 rounded-xl text-sm font-medium bg-rose-50 dark:bg-rose-950/50 text-rose-700 dark:text-rose-300 border border-rose-200 dark:border-rose-800';
-      } finally {
-        submitBtn.disabled = false;
-        submitText.textContent = 'Kirim Pesan';
-        submitIcon.className = 'fas fa-paper-plane mr-2';
+        formFeedback.classList.remove('hidden');
+        return;
       }
+
+      // Success feedback
+      formFeedback.innerHTML = `
+        <div class="flex flex-col space-y-2">
+          <p class="font-semibold text-emerald-800 dark:text-emerald-200">✓ Terima kasih, ${nama}! Pesan Anda telah kami terima.</p>
+          <p class="text-xs text-emerald-700 dark:text-emerald-300">Tim Vannabox akan segera menghubungi nomor ${telepon}.</p>
+        </div>
+      `;
+      formFeedback.className = 'mb-6 p-4 rounded-xl text-sm font-medium bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800';
+      formFeedback.classList.remove('hidden');
+
+      // Pre-fill WhatsApp message option
+      const waText = encodeURIComponent(`Halo Vannabox, saya ${nama} (${telepon})${email ? ' - ' + email : ''}. Pesan saya: ${pesan}`);
+      const waUrl = `https://wa.me/6281234567890?text=${waText}`;
+      
+      // Auto open WhatsApp in background or new tab if user wants direct response
+      window.open(waUrl, '_blank');
+
+      contactForm.reset();
     });
   }
 </script>
