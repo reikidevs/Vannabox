@@ -2,60 +2,66 @@
 // src/components/About.astro
 ---
 
-<section id="about" class="py-20 bg-white dark:bg-gray-800">
+<section id="about" class="py-20 bg-white dark:bg-gray-800 transition-colors">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
       <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
         Tentang <span class="text-primary-600 dark:text-primary-400">Vannabox</span>
       </h2>
-      <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+      <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
         Kami adalah UMKM tambak udang yang berkomitmen menghadirkan udang segar berkualitas tinggi dari Tegal untuk memenuhi kebutuhan kuliner Indonesia.
       </p>
     </div>
     
     <div class="grid lg:grid-cols-3 gap-8 mb-16">
-      <div class="bg-gray-50 dark:bg-gray-700 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
-        <div class="bg-primary-100 dark:bg-primary-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-          <i class="fas fa-history text-2xl text-primary-600 dark:text-primary-400"></i>
+      <div class="bg-gray-50 dark:bg-gray-700/40 rounded-3xl p-8 text-center hover:shadow-xl transition-all border border-gray-100 dark:border-gray-700/50">
+        <div class="bg-primary-100 dark:bg-primary-900/60 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 text-primary-600 dark:text-primary-400 shadow-sm">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
         </div>
-        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Pengalaman Bertahun-tahun</h3>
-        <p class="text-gray-600 dark:text-gray-300">Dengan pengalaman lebih dari 10 tahun dalam budidaya udang, kami memahami setiap detail untuk menghasilkan udang berkualitas premium.</p>
+        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Pengalaman Bertahun-tahun</h3>
+        <p class="text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed">Dengan pengalaman lebih dari 10 tahun dalam budidaya udang vaname, kami memahami setiap detail untuk menghasilkan panen berkualitas premium.</p>
       </div>
       
-      <div class="bg-gray-50 dark:bg-gray-700 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
-        <div class="bg-secondary-100 dark:bg-secondary-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-          <i class="fas fa-microscope text-2xl text-secondary-600 dark:text-secondary-400"></i>
+      <div class="bg-gray-50 dark:bg-gray-700/40 rounded-3xl p-8 text-center hover:shadow-xl transition-all border border-gray-100 dark:border-gray-700/50">
+        <div class="bg-secondary-100 dark:bg-secondary-900/60 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 text-secondary-600 dark:text-secondary-400 shadow-sm">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+          </svg>
         </div>
-        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Teknologi Modern</h3>
-        <p class="text-gray-600 dark:text-gray-300">Menggunakan teknologi bioflok dan sistem monitoring otomatis untuk menjaga kualitas air dan kesehatan udang secara optimal.</p>
+        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Teknologi Modern</h3>
+        <p class="text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed">Menggunakan teknologi bioflok dan sistem monitoring otomatis untuk menjaga kualitas air dan kesehatan udang secara optimal.</p>
       </div>
       
-      <div class="bg-gray-50 dark:bg-gray-700 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
-        <div class="bg-yellow-100 dark:bg-yellow-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-          <i class="fas fa-certificate text-2xl text-yellow-600 dark:text-yellow-400"></i>
+      <div class="bg-gray-50 dark:bg-gray-700/40 rounded-3xl p-8 text-center hover:shadow-xl transition-all border border-gray-100 dark:border-gray-700/50">
+        <div class="bg-amber-100 dark:bg-amber-900/60 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 text-amber-600 dark:text-amber-400 shadow-sm">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138z" />
+          </svg>
         </div>
-        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Sertifikasi Halal</h3>
-        <p class="text-gray-600 dark:text-gray-300">Produk kami telah tersertifikasi halal dan memenuhi standar keamanan pangan nasional untuk kepercayaan konsumen.</p>
+        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Sertifikasi & Higienitas</h3>
+        <p class="text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed">Produk kami memenuhi standar keamanan pangan higienis dan ditangani secara profesional untuk menjaga kepercayaan konsumen.</p>
       </div>
     </div>
     
-    <div class="bg-gradient-to-r from-primary-600 to-secondary-600 rounded-3xl p-8 md:p-12 text-white">
-      <div class="grid md:grid-cols-4 gap-8 text-center">
-        <div>
-          <div class="text-3xl md:text-4xl font-bold mb-2">500+</div>
-          <div class="text-primary-100">Kolam Aktif</div>
+    <div class="bg-gradient-to-r from-primary-600 to-secondary-600 rounded-3xl p-8 md:p-12 text-white shadow-xl">
+      <div class="grid md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/20">
+        <div class="pt-4 md:pt-0">
+          <div class="text-3xl md:text-4xl font-extrabold mb-1">500+</div>
+          <div class="text-primary-100 font-medium text-sm md:text-base">Kolam Aktif</div>
         </div>
-        <div>
-          <div class="text-3xl md:text-4xl font-bold mb-2">10+</div>
-          <div class="text-primary-100">Tahun Pengalaman</div>
+        <div class="pt-4 md:pt-0">
+          <div class="text-3xl md:text-4xl font-extrabold mb-1">10+</div>
+          <div class="text-primary-100 font-medium text-sm md:text-base">Tahun Pengalaman</div>
         </div>
-        <div>
-          <div class="text-3xl md:text-4xl font-bold mb-2">1000+</div>
-          <div class="text-primary-100">Pelanggan Puas</div>
+        <div class="pt-4 md:pt-0">
+          <div class="text-3xl md:text-4xl font-extrabold mb-1">1000+</div>
+          <div class="text-primary-100 font-medium text-sm md:text-base">Pelanggan Puas</div>
         </div>
-        <div>
-          <div class="text-3xl md:text-4xl font-bold mb-2">24/7</div>
-          <div class="text-primary-100">Layanan Support</div>
+        <div class="pt-4 md:pt-0">
+          <div class="text-3xl md:text-4xl font-extrabold mb-1">24/7</div>
+          <div class="text-primary-100 font-medium text-sm md:text-base">Layanan Pemesanan</div>
         </div>
       </div>
     </div>

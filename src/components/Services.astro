@@ -2,29 +2,29 @@
 // src/components/Services.astro
 const services = [
   {
-    icon: "fa-shipping-fast",
-    iconBg: "bg-blue-100 dark:bg-blue-900",
+    type: "shipping",
+    iconBg: "bg-blue-100 dark:bg-blue-900/60",
     iconColor: "text-blue-600 dark:text-blue-400",
     title: "Pengiriman Cepat",
     desc: "Pengiriman same day untuk area Tegal dan sekitarnya, menjaga kesegaran udang hingga sampai ke tangan Anda."
   },
   {
-    icon: "fa-snowflake",
-    iconBg: "bg-green-100 dark:bg-green-900",
-    iconColor: "text-green-600 dark:text-green-400",
+    type: "cold",
+    iconBg: "bg-emerald-100 dark:bg-emerald-900/60",
+    iconColor: "text-emerald-600 dark:text-emerald-400",
     title: "Cold Chain Terpadu",
     desc: "Sistem rantai dingin terjaga dari tambak, proses sortir, pengemasan thinwall ber-es, hingga freezer dan pengiriman."
   },
   {
-    icon: "fa-handshake",
-    iconBg: "bg-yellow-100 dark:bg-yellow-900",
-    iconColor: "text-yellow-600 dark:text-yellow-400",
+    type: "handshake",
+    iconBg: "bg-amber-100 dark:bg-amber-900/60",
+    iconColor: "text-amber-600 dark:text-amber-400",
     title: "Konsultasi Gratis",
     desc: "Konsultasi gratis untuk pemilihan ukuran udang (size), estimasi kebutuhan katering, dan penyesuaian anggaran Anda."
   },
   {
-    icon: "fa-undo",
-    iconBg: "bg-purple-100 dark:bg-purple-900",
+    type: "guarantee",
+    iconBg: "bg-purple-100 dark:bg-purple-900/60",
     iconColor: "text-purple-600 dark:text-purple-400",
     title: "Garansi Mutu Segar",
     desc: "Garansi penggantian produk jika udang yang diterima tidak memenuhi standar kesegaran prima kami."
@@ -46,8 +46,27 @@ const services = [
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
       {services.map((service) => (
         <div class="text-center group bg-gray-50 dark:bg-gray-700/40 p-8 rounded-2xl hover:shadow-lg transition-all border border-gray-100 dark:border-gray-700/50">
-          <div class={`${service.iconBg} w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform`}>
-            <i class={`fas ${service.icon} text-3xl ${service.iconColor}`}></i>
+          <div class={`${service.iconBg} w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform shadow-sm`}>
+            {service.type === 'shipping' && (
+              <svg class={`w-9 h-9 ${service.iconColor}`} fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
+              </svg>
+            )}
+            {service.type === 'cold' && (
+              <svg class={`w-9 h-9 ${service.iconColor}`} fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m0-18l3 3m-3-3l-3 3m0 12l3 3m0 0l3-3m6-9H3m18 0l-3 3m3-3l-3-3M6 9l-3 3m0 0l3 3m11.364-7.364l-12.728 12.728m0-12.728l12.728 12.728" />
+              </svg>
+            )}
+            {service.type === 'handshake' && (
+              <svg class={`w-9 h-9 ${service.iconColor}`} fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            )}
+            {service.type === 'guarantee' && (
+              <svg class={`w-9 h-9 ${service.iconColor}`} fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            )}
           </div>
           <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">{service.title}</h3>
           <p class="text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed">{service.desc}</p>
@@ -60,7 +79,9 @@ const services = [
       <div class="grid lg:grid-cols-2 gap-10 items-center">
         <div>
           <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-secondary-100 dark:bg-secondary-900/60 text-secondary-700 dark:text-secondary-300 font-semibold text-sm mb-4">
-            <i class="fas fa-temperature-low"></i>
+            <svg class="w-4 h-4 text-secondary-600 dark:text-secondary-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
             <span>Teknologi Penyimpanan Higienis</span>
           </div>
           <h3 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">
@@ -72,15 +93,21 @@ const services = [
 
           <ul class="space-y-3.5 text-sm md:text-base text-gray-700 dark:text-gray-200">
             <li class="flex items-start">
-              <i class="fas fa-check-circle text-secondary-500 mt-1 mr-3 flex-shrink-0 text-base"></i>
+              <svg class="w-5 h-5 text-secondary-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
               <span><strong>Kemasan Thinwall Rapat:</strong> Mencegah kontaminasi udara dan memudahkan penataan di freezer rumah tangga maupun restoran.</span>
             </li>
             <li class="flex items-start">
-              <i class="fas fa-check-circle text-secondary-500 mt-1 mr-3 flex-shrink-0 text-base"></i>
+              <svg class="w-5 h-5 text-secondary-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
               <span><strong>Lapisan Es Kristal Bersih:</strong> Menjaga hidrasi alami udang tanpa merusak tekstur kulit dan daging.</span>
             </li>
             <li class="flex items-start">
-              <i class="fas fa-check-circle text-secondary-500 mt-1 mr-3 flex-shrink-0 text-base"></i>
+              <svg class="w-5 h-5 text-secondary-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
               <span><strong>Penyimpanan Freezer Terkontrol:</strong> Siap disimpan lama sebagai stok makanan beku higienis keluarga Anda.</span>
             </li>
           </ul>
